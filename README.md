@@ -1,6 +1,5 @@
 # EvolutionaryDNN
 ## Plan
-# EvolutionaryDNN
 1. Implement CNN in TensorFlow
   - Understand of CNN (Mathematical details)
 2. Identify adjustable parameters

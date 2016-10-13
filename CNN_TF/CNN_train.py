@@ -22,12 +22,34 @@ def conv2d(x, W):
 def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
 
+def conv_layer(prev_layer, K, F, S):
+    """
+    Convolutional Layer
+
+    input:
+    prev_layer: The previous layer
+    K: Number of filters
+    F: Spatial extent (width of each filter)
+    S: The stride
+
+    ouput:
+    A layer with filters
+    Let W be the width of prev. layer
+    the output size is W/S
+    """
+    width_prev_layer = prev_layer.get_shape()[3]
+    Weight_mat = weight_variable([F, F, width_prev_layer, K])
+    return tf.nn.conv2d(prev_layer, W, strides=[1, S, S, 1], padding='SAME') + bias_variable([K])
+
 W_conv1 = weight_variable([5, 5, 1, 32])
 b_conv1 = bias_variable([32])
 
 x_image = tf.reshape(x, [-1, 28, 28, 1])
-h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+#h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+h_conv1 = tf.nn.relu(conv_layer(x_image, 32, 5, 1))
 h_pool1 = max_pool_2x2(h_conv1)
+
+print h_conv1.get_shape()
 
 W_conv2 = weight_variable([5, 5, 32, 64])
 b_conv2 = bias_variable([64])

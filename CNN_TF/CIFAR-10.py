@@ -1,11 +1,11 @@
 
 # coding: utf-8
 
-# In[1]:
-
+# In[1]: 
 from __future__ import absolute_import, division, print_function
 
-import time, random
+import time, random, math
+import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 
 import tensorflow as tf
@@ -23,12 +23,12 @@ def variable_summaries(var, name):
         tf.scalar_summary('min/' + name, tf.reduce_min(var))
         tf.histogram_summary(name, var)
 
-def weight_variable(shape):
-    initial = tf.truncated_normal(shape, stddev=0.1)
+def weight_variable(shape, sz = 20.0):
+    initial = tf.random_normal(shape, stddev=math.sqrt(2.0/sz))
     return tf.Variable(initial, name="weight")
 
 def bias_variable(shape):
-    initial = tf.constant(0.1, shape=shape)
+    initial = tf.constant(0.0, shape=shape)
     return tf.Variable(initial, name="bias")
 
 def max_pool_2x2(x, name = ""):
@@ -41,7 +41,8 @@ def conv_layer(prev_layer, n_output, filter_width, activation = tf.identity, str
     
     width_prev_layer = int(prev_layer.get_shape()[3])
     with tf.name_scope(name):
-        Weight_mat = weight_variable([filter_width, filter_width, width_prev_layer, n_output])
+        Weight_mat = weight_variable([filter_width, filter_width, width_prev_layer, n_output], 
+                sz = filter_width * filter_width * n_output)
         variable_summaries(Weight_mat, name+'/weights')
         res = tf.nn.conv2d(
             prev_layer, 
@@ -67,7 +68,7 @@ def full_connect_layer(prev_layer, n_output, activation = tf.identity, name = ""
     with tf.name_scope(name):
         sz_prev = int(reduce(lambda x,y: x*y, prev_layer.get_shape()[1:]))
         flat = tf.reshape(prev_layer, [-1, sz_prev])
-        Weight = weight_variable([sz_prev, n_output])
+        Weight = weight_variable([sz_prev, n_output], sz = n_output)
         Bias = bias_variable([n_output])
         return activation(tf.matmul(flat, Weight) + Bias, name = "activation")
 
@@ -89,27 +90,33 @@ network = max_pool_2x2(network)
 
 network = conv_layer(network, 256, 3, tf.nn.relu)
 network = conv_layer(network, 256, 3, tf.nn.relu)
+network = conv_layer(network, 256, 3, tf.nn.relu)
 network = max_pool_2x2(network)
 
 network = conv_layer(network, 512, 3, tf.nn.relu)
 network = conv_layer(network, 512, 3, tf.nn.relu)
+network = conv_layer(network, 512, 3, tf.nn.relu)
 network = max_pool_2x2(network)
 
-network = full_connect_layer(network, 4096, tf.nn.relu)
+network = conv_layer(network, 512, 2, tf.nn.relu)
+network = conv_layer(network, 512, 2, tf.nn.relu)
+network = conv_layer(network, 512, 2, tf.nn.relu)
+network = max_pool_2x2(network)
+
+network = full_connect_layer(network, 512, tf.nn.relu)
 network = tf.nn.dropout(network, keep_prob)
-network = full_connect_layer(network, 4096, tf.nn.relu)
+network = full_connect_layer(network, 512, tf.nn.relu)
 network = tf.nn.dropout(network, keep_prob)
 network = full_connect_layer(network, sz_y, tf.nn.softmax)
 
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(network), reduction_indices=[1]))
-train_step = tf.train.AdamOptimizer(1e-3).minimize(cross_entropy)
+train_step = tf.train.MomentumOptimizer(5e-6, 0.9).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(network, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 
 # In[ ]:
 
-import numpy as np
 
 def unpickle(file):
     import cPickle
@@ -145,7 +152,12 @@ class NP_Dataset(object):
         end = self._index_in_epoch
         return self._X[start:end], self._Y[start:end]
 
+    def get_epoch(self):
+        return self._epoch_completed
+
 def to_X(X, n_data):
+    X = np.array(X, dtype=float)
+    X /= 255.0
     X.resize(n_data, 3, 32, 32)
     X = X.swapaxes(1, 3)
     return X
@@ -157,8 +169,8 @@ def to_Y(Y, n_data):
     res[np.arange(n_data), Y] = 1
     return res
 
-pre_batch = '../Datasets//cifar-10-batches-py/'
-cifar_batch = [unpickle('../Datasets//cifar-10-batches-py/data_batch_%d'%i) for i in range(1, 6)]
+pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/cifar-10-batches-py/'
+cifar_batch = [unpickle(pre_batch + 'data_batch_%d'%i) for i in range(1, 6)]
 train_x = np.array(map(lambda x: x['data'], cifar_batch))
 train_x = to_X(train_x, 50000)
 train_y = np.array(map(lambda x: x['labels'], cifar_batch))
@@ -176,15 +188,16 @@ cifar_test = NP_Dataset(test_x, test_y)
 sess.run(tf.initialize_all_variables())
 
 start_train_time = time.time()
-for i in range(2000):
-    batch = cifar_train.next_batch(256)
+for i in range(300000):
+    batch = cifar_train.next_batch(32)
     if i%100 == 99:
         train_accuracy = accuracy.eval(feed_dict = {
-            x:batch[0], y_: batch[1], keep_prob: 1.0})
-        print("step %d, training accuracy %g"%(i, train_accuracy))
+            x: batch[0], y_: batch[1], keep_prob: 1.0})
+        print("step %d, epoch: %d, training accuracy %g"%(i+1, cifar_train.get_epoch(), train_accuracy))
     else:  # Record a summary
         train_step.run(feed_dict={
                 x: batch[0], y_: batch[1], keep_prob: 0.5})
 end_train_time = time.time()
 print("Total Training Time:",(end_train_time - start_train_time))
-
+print("test accuracy %g"%accuracy.eval(feed_dict={
+    x: test_x, y_:test_y, keep_prob: 1.0}))

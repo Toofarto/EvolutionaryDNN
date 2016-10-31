@@ -31,7 +31,7 @@ def load_data(dirname="17flowers", resize_pics=(224, 224), shuffle=True,
                                         filetypes=['.jpg', '.jpeg'],
                                         convert_gray=False,
                                         shuffle_data=shuffle,
-                                        categorical_Y=one_hot)
+                                        categorical_Y=True)
 
     return X, Y
 

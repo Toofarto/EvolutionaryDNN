@@ -1,3 +1,4 @@
+
 # coding: utf-8
 
 # In[1]: 
@@ -167,15 +168,15 @@ def to_Y(Y, n_data):
     res[np.arange(n_data), Y] = 1
     return res
 
-pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/cifar-10-batches-py/'
-cifar_batch = [unpickle(pre_batch + 'data_batch_%d'%i) for i in range(1, 6)]
+pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/EEG_data'
+cifar_batch = [unpickle(pre_batch + 's%.2d.dat'%i) for i in range(1, 6)]
 train_x = np.array(map(lambda x: x['data'], cifar_batch))
 train_x = to_X(train_x, 50000)
 train_y = np.array(map(lambda x: x['labels'], cifar_batch))
 train_y = to_Y(train_y, 50000)
 cifar_train = NP_Dataset(train_x, train_y)
 
-test = unpickle(pre_batch + 'test_batch') 
+test = unpickle(pre_batch + 's30.dat') 
 test_x = to_X(test['data'], 10000)
 test_y = to_Y(test['labels'], 10000)
 cifar_test = NP_Dataset(test_x, test_y)

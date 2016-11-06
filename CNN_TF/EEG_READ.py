@@ -17,7 +17,14 @@ class NP_Dataset(object):
         self._n_sample = np.shape(self._X)[0]
         self._index_in_epoch = 0
         self._epoch_completed = 0
-        
+        self.shuffle()
+
+    def shuffle(self):
+        perm = np.arange(self._n_sample) 
+        np.random.shuffle(perm)
+        self._X = self._X[perm]
+        self._Y = self._Y[perm]
+
     def next_batch(self, batch_size):
         start = self._index_in_epoch
         self._index_in_epoch += batch_size
@@ -25,10 +32,7 @@ class NP_Dataset(object):
             assert batch_size <= self._n_sample
             self._epoch_completed += 1
             # Shuffle
-            perm = np.arange(self._n_sample) 
-            np.random.shuffle(perm)
-            self._X = self._X[perm]
-            self._Y = self._Y[perm]
+            self.shuffle()
             # Start next epoch
             start = 0
             self._index_in_epoch = batch_size
@@ -75,3 +79,5 @@ if __name__ == "__main__":
     whole_y = to_y(np.array(map(lambda x: x["labels"], whole_data)))
     print np.shape(whole_x)
     print np.shape(whole_y)
+    with open(pre_batch + 'row_prepro.dat', 'wb') as f:
+        cPickle.dump((whole_x, whole_y), f)

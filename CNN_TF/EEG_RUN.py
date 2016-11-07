@@ -48,4 +48,8 @@ for i in range(300000):
     else:  # Record a summary
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 print("Total Training Time:",(time.time() - start_train_time))
-print("test accuracy %g"%accuracy.eval(feed_dict={x: test_x, y_:test_y, keep_prob: 1.0}))
+test_time = 5
+final_test_accuracy = 0.0
+for i in range(test_time):
+    final_test_accuracy += accuracy.eval(feed_dict={x: test_x, y_:test_y, keep_prob: 1.0}) / test_time
+print("final_test_accuracy = %f"%final_test_accuracy)

@@ -19,26 +19,27 @@ y_ = tf.placeholder(tf.float32, shape=[None, sz_y], name="y-input")
 keep_prob = tf.placeholder(tf.float32)
 
 network = conv_layer(x, 64, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 64, 3, tf.nn.relu)
 network = max_pool_2x2(network)
 
 network = conv_layer(network, 128, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 128, 3, tf.nn.relu)
 network = max_pool_2x2(network)
 
 network = conv_layer(network, 256, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 256, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 256, 3, tf.nn.relu)
 network = max_pool_2x2(network)
 
 network = conv_layer(network, 512, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 512, 3, tf.nn.relu)
+network = tf.nn.dropout(network, keep_prob)
 network = conv_layer(network, 512, 3, tf.nn.relu)
-network = max_pool_2x2(network)
-
-network = conv_layer(network, 512, 2, tf.nn.relu)
-network = conv_layer(network, 512, 2, tf.nn.relu)
-network = conv_layer(network, 512, 2, tf.nn.relu)
 network = max_pool_2x2(network)
 
 network = full_connect_layer(network, 512, tf.nn.relu)

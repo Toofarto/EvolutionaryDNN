@@ -19,7 +19,7 @@ whole_x = to_x(np.array(map(lambda x: x["data"], whole_data)))
 whole_y = to_y(np.array(map(lambda x: x["labels"], whole_data)))
 print("Finish_Preprocessing Data", time.time() - time_start_preproc)
 
-cut_off = 28 * 40 * 80
+cut_off = 24 * 40 * 320
 train_x = whole_x[:cut_off, :, :]
 train_y = whole_y[:cut_off, :]
 train_NP = NP_Dataset(train_x, train_y)
@@ -38,22 +38,30 @@ sess.run(tf.initialize_all_variables())
 start_train_time = time.time()
 last_epoch = -1
 for i in range(300000):
-    batch = train_NP.next_batch(16)
+    batch = train_NP.next_batch(32)
     if i%500 == 499:
         train_accuracy = accuracy.eval(feed_dict = {
             x: batch[0], y_: batch[1], keep_prob: 1.0})
         print("step %d, epoch: %d, training accuracy %g"%(i+1, train_NP.get_epoch(), train_accuracy))
     elif train_NP.get_epoch() > last_epoch:
         last_epoch = train_NP.get_epoch()
-        test_batch = test_NP.next_batch(16)
+        test_time = 5
+        test_accuracy = 0.0
+        for i in range(test_time):
+            test_batch = test_NP.next_batch(32)
+            test_accuracy += accuracy.eval(feed_dict={x: test_batch[0],
+                y_: test_batch[1],
+                keep_prob: 1.0}) / float(test_time)
         print("finished epoch: %d"%last_epoch)
-        print("test accuracy %g"%accuracy.eval(feed_dict={x: test_batch[0], y_: test_batch[1], keep_prob: 1.0}))
+        print("test accuracy ", test_accuracy)
     else:  # Record a summary
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 print("Total Training Time:",(time.time() - start_train_time))
 test_time = 5
 final_test_accuracy = 0.0
 for i in range(test_time):
-    test_batch = test_NP.next_batch(16)
-    final_test_accuracy += accuracy.eval(feed_dict={x: x: test_batch[0], y_: test_batch[1], keep_prob: 1.0}) / float(test_time)
+    test_batch = test_NP.next_batch(32)
+    final_test_accuracy += accuracy.eval(feed_dict={x: test_batch[0],
+            y_: test_batch[1],
+            keep_prob: 1.0}) / float(test_time)
 print("final_test_accuracy = %f"%final_test_accuracy)

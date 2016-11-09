@@ -13,7 +13,7 @@ from EEG_TF import *
 
 time_start_preprocess = time.time()
 
-x = tf.placeholder(tf.float32, shape=[None, 100, 90, 1], name="x-input")
+x = tf.placeholder(tf.float32, shape=[None, 50, 45, 1], name="x-input")
 sz_y = 3
 y_ = tf.placeholder(tf.float32, shape=[None, sz_y], name="y-input")
 keep_prob = tf.placeholder(tf.float32)

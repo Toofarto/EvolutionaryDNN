@@ -19,14 +19,14 @@ def to_x(data):
     for i in range(32, 40):
         data[:, :, i] /= max_feature[i - 31]
     sz_data = np.shape(data)
-    res_data = np.zeros((sz_data[0] * 80, 100, 90, 1))
+    res_data = np.zeros((sz_data[0] * 320, 50, 45, 1))
     for i in range(sz_data[0]):
-        for j in range(0, sz_data[1], 100):
-            for k in range(10):
-                for m in range(10):
+        for j in range(0, sz_data[1], 25):
+            for k in range(5):
+                for m in range(5):
                     for p in range(32):
                         dst_y, dst_x = egg_pos[p+1]
-                        res_data[i * 80 + (j / 100), k * 10 + dst_y, m * 9 + dst_x, 0] = data[i, j + k * 10 + m, p]
+                        res_data[i * 320 + (j / 25), k * 10 + dst_y, m * 9 + dst_x, 0] = data[i, j + k * 5 + m, p]
     return res_data
 
 def to_y(data):
@@ -37,7 +37,7 @@ def to_y(data):
     res = np.zeros((n_data, 3))
     res[np.arange(n_data), value_class] = 1
     # features were divided.
-    return np.repeat(res, 80, axis = 0)
+    return np.repeat(res, 320, axis = 0)
 
 if __name__ == "__main__":
     pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/EEG_data/'

@@ -2,6 +2,7 @@
 from __future__ import absolute_import, division, print_function
 
 import time, random, math, sys
+import sklearn as sk
 import numpy as np
 import tensorflow as tf
 
@@ -44,7 +45,14 @@ for i in range(300000):
         last_epoch = train_NP.get_epoch()
         test_batch = test_NP.next_batch(1024)
         print("finished epoch: %d"%last_epoch)
-        print("test accuracy %g"%accuracy.eval(feed_dict={x: test_batch[0], y_: test_batch[1], keep_prob: 1.0}))
+        val_accuracy, y_pred = sess.run([accuracy, y_p], feed_dict={x: test_batch[0], y_: test_batch[1], keep_prob: 1.0})
+        print("test accuracy %g"%val_accuracy)
+        y_true = np.argmax(test_batch[1], 1)
+	print("Precision", sk.metrics.precision_score(y_true, y_pred))
+	print("Recall", sk.metrics.recall_score(y_true, y_pred))
+	print("f1_score", sk.metrics.f1_score(y_true, y_pred))
+	print("confusion_matrix")
+	print(sk.metrics.confusion_matrix(y_true, y_pred))
     else:  # Record a summary
         train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
 print("Total Training Time:",(time.time() - start_train_time))

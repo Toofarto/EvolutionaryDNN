@@ -45,6 +45,7 @@ def conv_layer(prev_layer, n_output, filter_width, activation = tf.identity, str
             padding='SAME') + bias_variable([n_output])
         return activation(res)
 
+# TODO: Make it into a class
 def full_connect_layer(prev_layer, n_output, activation = tf.identity, name = ""):
     """
     transform the previous layer to a "flat" matrix
@@ -65,3 +66,28 @@ def full_connect_layer(prev_layer, n_output, activation = tf.identity, name = ""
         Weight = weight_variable([sz_prev, n_output], sz = n_output)
         Bias = bias_variable([n_output])
         return activation(tf.matmul(flat, Weight) + Bias, name = "activation")
+
+class FullConnectLayer(object):
+    def __init__(self, name = ""):
+        self.name = name if name != "" else 'fc_' + str(random.randint(1, 1 << 30))
+        self.saved = False
+
+    def update(self, weight, bias):
+        self.saved_weight = weight
+        self.saved_bias = bias
+        self.saved = True
+
+    def load(self, prev_layer, n_output, activation = tf.identity):
+        with tf.variable_scope(self.name):
+            sz_prev = int(reduce(lambda x,y: x*y, prev_layer.get_shape()[1:]))
+            self.flat = tf.reshape(prev_layer, [-1, sz_prev])
+            if not self.saved:
+                self.Weight = weight_variable([sz_prev, n_output], sz = n_output)
+                self.Bias = bias_variable([n_output])
+            else:
+                self.Weight = tf.Variable(self.saved_wegiht, name = "weight")
+                self.Bias = tf.Variable(self.saved_bias, name = "bias")
+            self.layer = activation(tf.matmul(self.flat, self.Weight) + self.Bias, name = "activation")
+
+    def get(self):
+        return (self.saved_weight, self.saved_bias)

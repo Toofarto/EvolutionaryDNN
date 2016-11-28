@@ -27,6 +27,7 @@ class NP_Dataset(object):
         self._Y = self._Y[perm]
 
     def next_batch(self, batch_size):
+        if (batch_size == -1): return (self._X[:], self._Y[:])
         start = self._index_in_epoch
         self._index_in_epoch += batch_size
         if self._index_in_epoch > self._n_sample:
@@ -42,3 +43,6 @@ class NP_Dataset(object):
 
     def get_epoch(self):
         return self._epoch_completed
+
+    def get_n_sample(self):
+        return self._n_sample

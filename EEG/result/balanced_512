@@ -1,0 +1,1704 @@
+method_label: 
+{0: 222, 1: 519, 2: 539}
+train and test data precess finished
+('time for preprocess', 15.315808057785034)
+finished epoch: 0
+test accuracy 0.425, gred: 10.0978
+('Precision', 0.18062500000000001)
+('Recall', 0.42499999999999999)
+('f1_score', 0.25350877192982457)
+confusion_matrix
+[[   0    0 1260]
+ [   0    0 4260]
+ [   0    0 4080]]
+step 500, epoch: 0, training accuracy 0.46875
+step 1000, epoch: 0, training accuracy 0.25
+step 1500, epoch: 0, training accuracy 0.21875
+step 2000, epoch: 0, training accuracy 0.4375
+finished epoch: 1
+test accuracy 0.379375, gred: 1.17875
+('Precision', 0.36851806162199674)
+('Recall', 0.37937500000000002)
+('f1_score', 0.35627748384661401)
+confusion_matrix
+[[ 184  410  666]
+ [ 328  975 2957]
+ [ 443 1154 2483]]
+step 2500, epoch: 1, training accuracy 0.53125
+step 3000, epoch: 1, training accuracy 0.15625
+step 3500, epoch: 1, training accuracy 0.46875
+step 4000, epoch: 1, training accuracy 0.3125
+step 4500, epoch: 1, training accuracy 0.4375
+finished epoch: 2
+test accuracy 0.40125, gred: 1.09487
+('Precision', 0.37898463108887676)
+('Recall', 0.40125)
+('f1_score', 0.35805693311380571)
+confusion_matrix
+[[  79  378  803]
+ [ 111  935 3214]
+ [ 149 1093 2838]]
+step 5000, epoch: 2, training accuracy 0.59375
+step 5500, epoch: 2, training accuracy 0.375
+step 6000, epoch: 2, training accuracy 0.28125
+step 6500, epoch: 2, training accuracy 0.5
+step 7000, epoch: 2, training accuracy 0.46875
+finished epoch: 3
+test accuracy 0.402396, gred: 1.07302
+('Precision', 0.38269124034289342)
+('Recall', 0.40239583333333334)
+('f1_score', 0.35501140937593612)
+confusion_matrix
+[[  87  361  812]
+ [  79  864 3317]
+ [ 154 1014 2912]]
+step 7500, epoch: 3, training accuracy 0.5625
+step 8000, epoch: 3, training accuracy 0.4375
+step 8500, epoch: 3, training accuracy 0.375
+step 9000, epoch: 3, training accuracy 0.5
+step 9500, epoch: 3, training accuracy 0.34375
+finished epoch: 4
+test accuracy 0.398646, gred: 1.05892
+('Precision', 0.38704840041760974)
+('Recall', 0.39864583333333331)
+('f1_score', 0.38098943936449131)
+confusion_matrix
+[[ 146  508  606]
+ [ 149 1334 2777]
+ [ 284 1449 2347]]
+step 10000, epoch: 4, training accuracy 0.5
+step 10500, epoch: 4, training accuracy 0.40625
+step 11000, epoch: 4, training accuracy 0.40625
+step 11500, epoch: 4, training accuracy 0.34375
+step 12000, epoch: 4, training accuracy 0.34375
+finished epoch: 5
+test accuracy 0.403229, gred: 1.03816
+('Precision', 0.38601557536441428)
+('Recall', 0.40322916666666669)
+('f1_score', 0.37879302393577419)
+confusion_matrix
+[[  54  600  606]
+ [  49 1515 2696]
+ [ 106 1672 2302]]
+step 12500, epoch: 5, training accuracy 0.4375
+step 13000, epoch: 5, training accuracy 0.375
+step 13500, epoch: 5, training accuracy 0.4375
+step 14000, epoch: 5, training accuracy 0.375
+step 14500, epoch: 5, training accuracy 0.46875
+finished epoch: 6
+test accuracy 0.397188, gred: 1.04655
+('Precision', 0.38877578631234028)
+('Recall', 0.39718750000000003)
+('f1_score', 0.38062081269126841)
+confusion_matrix
+[[ 168  462  630]
+ [ 144 1315 2801]
+ [ 292 1458 2330]]
+step 15000, epoch: 6, training accuracy 0.5
+step 15500, epoch: 6, training accuracy 0.40625
+step 16000, epoch: 6, training accuracy 0.5
+step 16500, epoch: 6, training accuracy 0.34375
+step 17000, epoch: 6, training accuracy 0.34375
+finished epoch: 7
+test accuracy 0.396771, gred: 1.03777
+('Precision', 0.38462818970193147)
+('Recall', 0.39677083333333335)
+('f1_score', 0.38017123485285453)
+confusion_matrix
+[[ 102  563  595]
+ [  88 1560 2612]
+ [ 192 1741 2147]]
+step 17500, epoch: 7, training accuracy 0.40625
+step 18000, epoch: 7, training accuracy 0.34375
+step 18500, epoch: 7, training accuracy 0.46875
+step 19000, epoch: 7, training accuracy 0.40625
+step 19500, epoch: 7, training accuracy 0.25
+finished epoch: 8
+test accuracy 0.397708, gred: 1.03795
+('Precision', 0.38678609033468203)
+('Recall', 0.39770833333333333)
+('f1_score', 0.37245494764532366)
+confusion_matrix
+[[  95  478  687]
+ [  73 1283 2904]
+ [ 143 1497 2440]]
+step 20000, epoch: 8, training accuracy 0.40625
+step 20500, epoch: 8, training accuracy 0.53125
+step 21000, epoch: 8, training accuracy 0.28125
+step 21500, epoch: 8, training accuracy 0.46875
+step 22000, epoch: 8, training accuracy 0.34375
+finished epoch: 9
+test accuracy 0.395, gred: 1.03634
+('Precision', 0.38264633484296068)
+('Recall', 0.39500000000000002)
+('f1_score', 0.36844606558179827)
+confusion_matrix
+[[  88  492  680]
+ [  67 1252 2941]
+ [ 140 1488 2452]]
+step 22500, epoch: 9, training accuracy 0.5625
+step 23000, epoch: 9, training accuracy 0.375
+step 23500, epoch: 9, training accuracy 0.3125
+step 24000, epoch: 9, training accuracy 0.375
+step 24500, epoch: 9, training accuracy 0.40625
+finished epoch: 10
+test accuracy 0.393438, gred: 1.03373
+('Precision', 0.37929229127370195)
+('Recall', 0.3934375)
+('f1_score', 0.37056044685670553)
+confusion_matrix
+[[  80  552  628]
+ [  69 1380 2811]
+ [ 145 1618 2317]]
+step 25000, epoch: 10, training accuracy 0.5
+step 25500, epoch: 10, training accuracy 0.4375
+step 26000, epoch: 10, training accuracy 0.46875
+step 26500, epoch: 10, training accuracy 0.5625
+step 27000, epoch: 10, training accuracy 0.625
+finished epoch: 11
+test accuracy 0.391354, gred: 1.03866
+('Precision', 0.38054620263729738)
+('Recall', 0.39135416666666667)
+('f1_score', 0.37581869093976117)
+confusion_matrix
+[[ 132  542  586]
+ [ 118 1429 2713]
+ [ 243 1641 2196]]
+step 27500, epoch: 11, training accuracy 0.625
+step 28000, epoch: 11, training accuracy 0.5625
+step 28500, epoch: 11, training accuracy 0.34375
+step 29000, epoch: 11, training accuracy 0.40625
+step 29500, epoch: 11, training accuracy 0.375
+finished epoch: 12
+test accuracy 0.388125, gred: 1.03822
+('Precision', 0.37749774560943372)
+('Recall', 0.388125)
+('f1_score', 0.37294979284259855)
+confusion_matrix
+[[ 126  552  582]
+ [ 114 1452 2694]
+ [ 225 1707 2148]]
+step 30000, epoch: 12, training accuracy 0.3125
+step 30500, epoch: 12, training accuracy 0.46875
+step 31000, epoch: 12, training accuracy 0.40625
+step 31500, epoch: 12, training accuracy 0.5
+step 32000, epoch: 12, training accuracy 0.375
+finished epoch: 13
+test accuracy 0.389167, gred: 1.03769
+('Precision', 0.37705928124647264)
+('Recall', 0.38916666666666666)
+('f1_score', 0.36977148945672716)
+confusion_matrix
+[[ 113  536  611]
+ [ 103 1345 2812]
+ [ 194 1608 2278]]
+step 32500, epoch: 13, training accuracy 0.5
+step 33000, epoch: 13, training accuracy 0.21875
+step 33500, epoch: 13, training accuracy 0.4375
+step 34000, epoch: 13, training accuracy 0.375
+step 34500, epoch: 13, training accuracy 0.46875
+finished epoch: 14
+test accuracy 0.389583, gred: 1.03704
+('Precision', 0.37793925084673002)
+('Recall', 0.38958333333333334)
+('f1_score', 0.3700262565589808)
+confusion_matrix
+[[ 116  523  621]
+ [ 103 1333 2824]
+ [ 196 1593 2291]]
+step 35000, epoch: 14, training accuracy 0.5
+step 35500, epoch: 14, training accuracy 0.5
+step 36000, epoch: 14, training accuracy 0.28125
+step 36500, epoch: 14, training accuracy 0.3125
+step 37000, epoch: 14, training accuracy 0.4375
+finished epoch: 15
+test accuracy 0.388333, gred: 1.0391
+('Precision', 0.37840987867371256)
+('Recall', 0.38833333333333331)
+('f1_score', 0.37203897107650591)
+confusion_matrix
+[[ 145  499  616]
+ [ 139 1341 2780]
+ [ 240 1598 2242]]
+step 37500, epoch: 15, training accuracy 0.40625
+step 38000, epoch: 15, training accuracy 0.4375
+step 38500, epoch: 15, training accuracy 0.34375
+step 39000, epoch: 15, training accuracy 0.5
+step 39500, epoch: 15, training accuracy 0.65625
+finished epoch: 16
+test accuracy 0.392396, gred: 1.03742
+('Precision', 0.38320270186454647)
+('Recall', 0.39239583333333333)
+('f1_score', 0.37910150992797897)
+confusion_matrix
+[[ 146  534  580]
+ [ 138 1488 2634]
+ [ 239 1708 2133]]
+step 40000, epoch: 16, training accuracy 0.53125
+step 40500, epoch: 16, training accuracy 0.53125
+step 41000, epoch: 16, training accuracy 0.5625
+step 41500, epoch: 16, training accuracy 0.5625
+step 42000, epoch: 16, training accuracy 0.375
+finished epoch: 17
+test accuracy 0.386458, gred: 1.04546
+('Precision', 0.37991081873630556)
+('Recall', 0.38645833333333335)
+('f1_score', 0.37351353113224905)
+confusion_matrix
+[[ 216  455  589]
+ [ 221 1253 2786]
+ [ 384 1455 2241]]
+step 42500, epoch: 17, training accuracy 0.53125
+step 43000, epoch: 17, training accuracy 0.40625
+step 43500, epoch: 17, training accuracy 0.4375
+step 44000, epoch: 17, training accuracy 0.375
+step 44500, epoch: 17, training accuracy 0.5625
+finished epoch: 18
+test accuracy 0.388125, gred: 1.04149
+('Precision', 0.38024170564573023)
+('Recall', 0.388125)
+('f1_score', 0.37517595671584253)
+confusion_matrix
+[[ 180  484  596]
+ [ 174 1354 2732]
+ [ 308 1580 2192]]
+step 45000, epoch: 18, training accuracy 0.5625
+step 45500, epoch: 18, training accuracy 0.46875
+step 46000, epoch: 18, training accuracy 0.46875
+step 46500, epoch: 18, training accuracy 0.40625
+step 47000, epoch: 18, training accuracy 0.5625
+finished epoch: 19
+test accuracy 0.387396, gred: 1.04369
+('Precision', 0.38102497478359909)
+('Recall', 0.38739583333333333)
+('f1_score', 0.37580068030604774)
+confusion_matrix
+[[ 202  454  604]
+ [ 208 1333 2719]
+ [ 364 1532 2184]]
+step 47500, epoch: 19, training accuracy 0.40625
+step 48000, epoch: 19, training accuracy 0.375
+step 48500, epoch: 19, training accuracy 0.3125
+step 49000, epoch: 19, training accuracy 0.59375
+step 49500, epoch: 19, training accuracy 0.625
+finished epoch: 20
+test accuracy 0.388646, gred: 1.04022
+('Precision', 0.3814311469228272)
+('Recall', 0.38864583333333336)
+('f1_score', 0.37802018291040906)
+confusion_matrix
+[[ 186  490  584]
+ [ 189 1427 2644]
+ [ 330 1632 2118]]
+step 50000, epoch: 20, training accuracy 0.5
+step 50500, epoch: 20, training accuracy 0.5
+step 51000, epoch: 20, training accuracy 0.40625
+step 51500, epoch: 20, training accuracy 0.3125
+finished epoch: 21
+test accuracy 0.390208, gred: 1.04091
+('Precision', 0.38175100464958889)
+('Recall', 0.39020833333333332)
+('f1_score', 0.37825665092305022)
+confusion_matrix
+[[ 168  482  610]
+ [ 185 1425 2650]
+ [ 318 1609 2153]]
+step 52000, epoch: 21, training accuracy 0.46875
+step 52500, epoch: 21, training accuracy 0.53125
+step 53000, epoch: 21, training accuracy 0.46875
+step 53500, epoch: 21, training accuracy 0.46875
+step 54000, epoch: 21, training accuracy 0.53125
+finished epoch: 22
+test accuracy 0.398125, gred: 1.03383
+('Precision', 0.38800772804424155)
+('Recall', 0.39812500000000001)
+('f1_score', 0.38734996078716821)
+confusion_matrix
+[[ 142  555  563]
+ [ 145 1693 2422]
+ [ 260 1833 1987]]
+step 54500, epoch: 22, training accuracy 0.34375
+step 55000, epoch: 22, training accuracy 0.4375
+step 55500, epoch: 22, training accuracy 0.40625
+step 56000, epoch: 22, training accuracy 0.40625
+step 56500, epoch: 22, training accuracy 0.40625
+finished epoch: 23
+test accuracy 0.393854, gred: 1.03997
+('Precision', 0.38328707806117585)
+('Recall', 0.39385416666666667)
+('f1_score', 0.37845304881734276)
+confusion_matrix
+[[ 140  481  639]
+ [ 154 1407 2699]
+ [ 260 1586 2234]]
+step 57000, epoch: 23, training accuracy 0.46875
+step 57500, epoch: 23, training accuracy 0.4375
+step 58000, epoch: 23, training accuracy 0.53125
+step 58500, epoch: 23, training accuracy 0.4375
+step 59000, epoch: 23, training accuracy 0.40625
+finished epoch: 24
+test accuracy 0.391875, gred: 1.03843
+('Precision', 0.38219226146280699)
+('Recall', 0.39187499999999997)
+('f1_score', 0.38100752963505918)
+confusion_matrix
+[[ 153  529  578]
+ [ 175 1548 2537]
+ [ 293 1726 2061]]
+step 59500, epoch: 24, training accuracy 0.53125
+step 60000, epoch: 24, training accuracy 0.46875
+step 60500, epoch: 24, training accuracy 0.53125
+step 61000, epoch: 24, training accuracy 0.5625
+step 61500, epoch: 24, training accuracy 0.46875
+finished epoch: 25
+test accuracy 0.393125, gred: 1.0408
+('Precision', 0.38662544776840585)
+('Recall', 0.393125)
+('f1_score', 0.38478513856369756)
+confusion_matrix
+[[ 197  504  559]
+ [ 202 1531 2527]
+ [ 346 1688 2046]]
+step 62000, epoch: 25, training accuracy 0.375
+step 62500, epoch: 25, training accuracy 0.6875
+step 63000, epoch: 25, training accuracy 0.5
+step 63500, epoch: 25, training accuracy 0.5
+step 64000, epoch: 25, training accuracy 0.5
+finished epoch: 26
+test accuracy 0.395312, gred: 1.04064
+('Precision', 0.38927264505500553)
+('Recall', 0.39531250000000001)
+('f1_score', 0.38457565850435343)
+confusion_matrix
+[[ 199  452  609]
+ [ 197 1427 2636]
+ [ 334 1577 2169]]
+step 64500, epoch: 26, training accuracy 0.34375
+step 65000, epoch: 26, training accuracy 0.40625
+step 65500, epoch: 26, training accuracy 0.375
+step 66000, epoch: 26, training accuracy 0.5
+step 66500, epoch: 26, training accuracy 0.4375
+finished epoch: 27
+test accuracy 0.398646, gred: 1.03843
+('Precision', 0.39181744950930875)
+('Recall', 0.39864583333333331)
+('f1_score', 0.38984658846071035)
+confusion_matrix
+[[ 189  495  576]
+ [ 189 1577 2494]
+ [ 325 1694 2061]]
+step 67000, epoch: 27, training accuracy 0.46875
+step 67500, epoch: 27, training accuracy 0.34375
+step 68000, epoch: 27, training accuracy 0.5625
+step 68500, epoch: 27, training accuracy 0.5625
+step 69000, epoch: 27, training accuracy 0.5
+finished epoch: 28
+test accuracy 0.396354, gred: 1.03944
+('Precision', 0.39088171738457939)
+('Recall', 0.39635416666666667)
+('f1_score', 0.38925118448084789)
+confusion_matrix
+[[ 212  497  551]
+ [ 204 1582 2474]
+ [ 354 1715 2011]]
+step 69500, epoch: 28, training accuracy 0.40625
+step 70000, epoch: 28, training accuracy 0.4375
+step 70500, epoch: 28, training accuracy 0.34375
+step 71000, epoch: 28, training accuracy 0.4375
+step 71500, epoch: 28, training accuracy 0.46875
+finished epoch: 29
+test accuracy 0.398438, gred: 1.0334
+('Precision', 0.38761374183364744)
+('Recall', 0.3984375)
+('f1_score', 0.38814875895921191)
+confusion_matrix
+[[ 139  606  515]
+ [ 144 1789 2327]
+ [ 258 1925 1897]]
+step 72000, epoch: 29, training accuracy 0.21875
+step 72500, epoch: 29, training accuracy 0.4375
+step 73000, epoch: 29, training accuracy 0.4375
+step 73500, epoch: 29, training accuracy 0.375
+step 74000, epoch: 29, training accuracy 0.375
+finished epoch: 30
+test accuracy 0.400208, gred: 1.03501
+('Precision', 0.3895619572611157)
+('Recall', 0.40020833333333333)
+('f1_score', 0.38753509928762564)
+confusion_matrix
+[[ 133  544  583]
+ [ 134 1628 2498]
+ [ 239 1760 2081]]
+step 74500, epoch: 30, training accuracy 0.5
+step 75000, epoch: 30, training accuracy 0.375
+step 75500, epoch: 30, training accuracy 0.625
+step 76000, epoch: 30, training accuracy 0.5625
+step 76500, epoch: 30, training accuracy 0.625
+finished epoch: 31
+test accuracy 0.397812, gred: 1.03617
+('Precision', 0.38794032332654826)
+('Recall', 0.39781250000000001)
+('f1_score', 0.38777663397466761)
+confusion_matrix
+[[ 151  569  540]
+ [ 161 1686 2413]
+ [ 273 1825 1982]]
+step 77000, epoch: 31, training accuracy 0.65625
+step 77500, epoch: 31, training accuracy 0.46875
+step 78000, epoch: 31, training accuracy 0.78125
+step 78500, epoch: 31, training accuracy 0.5
+step 79000, epoch: 31, training accuracy 0.5
+finished epoch: 32
+test accuracy 0.4, gred: 1.03605
+('Precision', 0.38992585580058436)
+('Recall', 0.40000000000000002)
+('f1_score', 0.38744886001394718)
+confusion_matrix
+[[ 142  519  599]
+ [ 144 1577 2539]
+ [ 261 1698 2121]]
+step 79500, epoch: 32, training accuracy 0.40625
+step 80000, epoch: 32, training accuracy 0.375
+step 80500, epoch: 32, training accuracy 0.59375
+step 81000, epoch: 32, training accuracy 0.65625
+step 81500, epoch: 32, training accuracy 0.46875
+finished epoch: 33
+test accuracy 0.395521, gred: 1.03733
+('Precision', 0.3861745272525427)
+('Recall', 0.39552083333333332)
+('f1_score', 0.38630239795265087)
+confusion_matrix
+[[ 157  563  540]
+ [ 167 1694 2399]
+ [ 289 1845 1946]]
+step 82000, epoch: 33, training accuracy 0.3125
+step 82500, epoch: 33, training accuracy 0.46875
+step 83000, epoch: 33, training accuracy 0.3125
+step 83500, epoch: 33, training accuracy 0.40625
+step 84000, epoch: 33, training accuracy 0.53125
+finished epoch: 34
+test accuracy 0.394688, gred: 1.03744
+('Precision', 0.38540004836935415)
+('Recall', 0.39468750000000002)
+('f1_score', 0.38528068924746844)
+confusion_matrix
+[[ 159  556  545]
+ [ 171 1645 2444]
+ [ 301 1794 1985]]
+step 84500, epoch: 34, training accuracy 0.34375
+step 85000, epoch: 34, training accuracy 0.4375
+step 85500, epoch: 34, training accuracy 0.53125
+step 86000, epoch: 34, training accuracy 0.53125
+step 86500, epoch: 34, training accuracy 0.40625
+finished epoch: 35
+test accuracy 0.397917, gred: 1.0356
+('Precision', 0.38723846221559427)
+('Recall', 0.39791666666666664)
+('f1_score', 0.38657042416289839)
+confusion_matrix
+[[ 137  561  562]
+ [ 144 1673 2443]
+ [ 255 1815 2010]]
+step 87000, epoch: 35, training accuracy 0.40625
+step 87500, epoch: 35, training accuracy 0.625
+step 88000, epoch: 35, training accuracy 0.5
+step 88500, epoch: 35, training accuracy 0.34375
+step 89000, epoch: 35, training accuracy 0.59375
+finished epoch: 36
+test accuracy 0.400417, gred: 1.03353
+('Precision', 0.38833098403711136)
+('Recall', 0.40041666666666664)
+('f1_score', 0.38925056606400915)
+confusion_matrix
+[[ 127  626  507]
+ [ 141 1845 2274]
+ [ 236 1972 1872]]
+step 89500, epoch: 36, training accuracy 0.46875
+step 90000, epoch: 36, training accuracy 0.4375
+step 90500, epoch: 36, training accuracy 0.5
+step 91000, epoch: 36, training accuracy 0.4375
+step 91500, epoch: 36, training accuracy 0.53125
+finished epoch: 37
+test accuracy 0.3975, gred: 1.03542
+('Precision', 0.3879144171702642)
+('Recall', 0.39750000000000002)
+('f1_score', 0.38386001318035406)
+confusion_matrix
+[[ 148  482  630]
+ [ 156 1475 2629]
+ [ 272 1615 2193]]
+step 92000, epoch: 37, training accuracy 0.4375
+step 92500, epoch: 37, training accuracy 0.46875
+step 93000, epoch: 37, training accuracy 0.375
+step 93500, epoch: 37, training accuracy 0.53125
+step 94000, epoch: 37, training accuracy 0.5
+finished epoch: 38
+test accuracy 0.401979, gred: 1.03273
+('Precision', 0.3898977663129426)
+('Recall', 0.40197916666666667)
+('f1_score', 0.38861324317600615)
+confusion_matrix
+[[ 117  567  576]
+ [ 124 1702 2434]
+ [ 213 1827 2040]]
+step 94500, epoch: 38, training accuracy 0.53125
+step 95000, epoch: 38, training accuracy 0.53125
+step 95500, epoch: 38, training accuracy 0.625
+step 96000, epoch: 38, training accuracy 0.3125
+step 96500, epoch: 38, training accuracy 0.59375
+finished epoch: 39
+test accuracy 0.399792, gred: 1.03522
+('Precision', 0.38971291318897178)
+('Recall', 0.39979166666666666)
+('f1_score', 0.39010024002522442)
+confusion_matrix
+[[ 150  570  540]
+ [ 161 1746 2353]
+ [ 274 1864 1942]]
+step 97000, epoch: 39, training accuracy 0.46875
+step 97500, epoch: 39, training accuracy 0.59375
+step 98000, epoch: 39, training accuracy 0.4375
+step 98500, epoch: 39, training accuracy 0.5
+step 99000, epoch: 39, training accuracy 0.5
+finished epoch: 40
+test accuracy 0.399167, gred: 1.03577
+('Precision', 0.38990260165904228)
+('Recall', 0.39916666666666667)
+('f1_score', 0.3903364754325806)
+confusion_matrix
+[[ 160  559  541]
+ [ 167 1752 2341]
+ [ 291 1869 1920]]
+step 99500, epoch: 40, training accuracy 0.46875
+step 100000, epoch: 40, training accuracy 0.34375
+step 100500, epoch: 40, training accuracy 0.34375
+step 101000, epoch: 40, training accuracy 0.53125
+step 101500, epoch: 40, training accuracy 0.46875
+finished epoch: 41
+test accuracy 0.400521, gred: 1.03705
+('Precision', 0.39252616372092264)
+('Recall', 0.40052083333333333)
+('f1_score', 0.39281689796185221)
+confusion_matrix
+[[ 179  543  538]
+ [ 180 1732 2348]
+ [ 323 1823 1934]]
+step 102000, epoch: 41, training accuracy 0.59375
+step 102500, epoch: 41, training accuracy 0.5
+step 103000, epoch: 41, training accuracy 0.5
+step 103500, epoch: 41, training accuracy 0.40625
+finished epoch: 42
+test accuracy 0.398542, gred: 1.03789
+('Precision', 0.38998543961680515)
+('Recall', 0.39854166666666668)
+('f1_score', 0.38923596005847827)
+confusion_matrix
+[[ 166  528  566]
+ [ 171 1649 2440]
+ [ 302 1767 2011]]
+step 104000, epoch: 42, training accuracy 0.34375
+step 104500, epoch: 42, training accuracy 0.5625
+step 105000, epoch: 42, training accuracy 0.5625
+step 105500, epoch: 42, training accuracy 0.40625
+step 106000, epoch: 42, training accuracy 0.3125
+finished epoch: 43
+test accuracy 0.403021, gred: 1.03486
+('Precision', 0.3922092102084605)
+('Recall', 0.40302083333333333)
+('f1_score', 0.39127937916573774)
+confusion_matrix
+[[ 140  530  590]
+ [ 155 1648 2457]
+ [ 266 1733 2081]]
+step 106500, epoch: 43, training accuracy 0.5625
+step 107000, epoch: 43, training accuracy 0.53125
+step 107500, epoch: 43, training accuracy 0.5625
+step 108000, epoch: 43, training accuracy 0.5
+step 108500, epoch: 43, training accuracy 0.3125
+finished epoch: 44
+test accuracy 0.397917, gred: 1.03713
+('Precision', 0.38935902535589823)
+('Recall', 0.39791666666666664)
+('f1_score', 0.39035611473389764)
+confusion_matrix
+[[ 174  569  517]
+ [ 183 1763 2314]
+ [ 322 1875 1883]]
+step 109000, epoch: 44, training accuracy 0.53125
+step 109500, epoch: 44, training accuracy 0.46875
+step 110000, epoch: 44, training accuracy 0.5
+step 110500, epoch: 44, training accuracy 0.40625
+step 111000, epoch: 44, training accuracy 0.46875
+finished epoch: 45
+test accuracy 0.400521, gred: 1.03565
+('Precision', 0.39122955025198913)
+('Recall', 0.40052083333333333)
+('f1_score', 0.39304378716862481)
+confusion_matrix
+[[ 171  588  501]
+ [ 184 1856 2220]
+ [ 324 1938 1818]]
+step 111500, epoch: 45, training accuracy 0.28125
+step 112000, epoch: 45, training accuracy 0.4375
+step 112500, epoch: 45, training accuracy 0.53125
+step 113000, epoch: 45, training accuracy 0.5625
+step 113500, epoch: 45, training accuracy 0.34375
+finished epoch: 46
+test accuracy 0.402396, gred: 1.03233
+('Precision', 0.39233495938518786)
+('Recall', 0.40239583333333334)
+('f1_score', 0.39341892063325912)
+confusion_matrix
+[[ 155  572  533]
+ [ 165 1820 2275]
+ [ 287 1905 1888]]
+step 114000, epoch: 46, training accuracy 0.46875
+step 114500, epoch: 46, training accuracy 0.46875
+step 115000, epoch: 46, training accuracy 0.34375
+step 115500, epoch: 46, training accuracy 0.5
+step 116000, epoch: 46, training accuracy 0.4375
+finished epoch: 47
+test accuracy 0.400625, gred: 1.03806
+('Precision', 0.39379658521476718)
+('Recall', 0.40062500000000001)
+('f1_score', 0.39145248763237134)
+confusion_matrix
+[[ 189  487  584]
+ [ 189 1563 2508]
+ [ 332 1654 2094]]
+step 116500, epoch: 47, training accuracy 0.5625
+step 117000, epoch: 47, training accuracy 0.53125
+step 117500, epoch: 47, training accuracy 0.53125
+step 118000, epoch: 47, training accuracy 0.46875
+step 118500, epoch: 47, training accuracy 0.5625
+finished epoch: 48
+test accuracy 0.40125, gred: 1.03558
+('Precision', 0.39241688309754752)
+('Recall', 0.40125)
+('f1_score', 0.39323336689537908)
+confusion_matrix
+[[ 171  554  535]
+ [ 184 1753 2323]
+ [ 316 1836 1928]]
+step 119000, epoch: 48, training accuracy 0.4375
+step 119500, epoch: 48, training accuracy 0.5
+step 120000, epoch: 48, training accuracy 0.53125
+step 120500, epoch: 48, training accuracy 0.46875
+step 121000, epoch: 48, training accuracy 0.4375
+finished epoch: 49
+test accuracy 0.404063, gred: 1.03277
+('Precision', 0.39286536562519958)
+('Recall', 0.40406249999999999)
+('f1_score', 0.39204297525702331)
+confusion_matrix
+[[ 134  536  590]
+ [ 148 1682 2430]
+ [ 249 1768 2063]]
+step 121500, epoch: 49, training accuracy 0.46875
+step 122000, epoch: 49, training accuracy 0.5
+step 122500, epoch: 49, training accuracy 0.34375
+step 123000, epoch: 49, training accuracy 0.40625
+step 123500, epoch: 49, training accuracy 0.28125
+finished epoch: 50
+test accuracy 0.401979, gred: 1.03238
+('Precision', 0.3912337366025137)
+('Recall', 0.40197916666666667)
+('f1_score', 0.39219211609720522)
+confusion_matrix
+[[ 146  590  524]
+ [ 162 1802 2296]
+ [ 266 1903 1911]]
+step 124000, epoch: 50, training accuracy 0.53125
+step 124500, epoch: 50, training accuracy 0.53125
+step 125000, epoch: 50, training accuracy 0.34375
+step 125500, epoch: 50, training accuracy 0.5625
+step 126000, epoch: 50, training accuracy 0.40625
+finished epoch: 51
+test accuracy 0.396771, gred: 1.03848
+('Precision', 0.38896449686140627)
+('Recall', 0.39677083333333335)
+('f1_score', 0.38769486683331383)
+confusion_matrix
+[[ 180  506  574]
+ [ 206 1556 2498]
+ [ 344 1663 2073]]
+step 126500, epoch: 51, training accuracy 0.5625
+step 127000, epoch: 51, training accuracy 0.40625
+step 127500, epoch: 51, training accuracy 0.40625
+step 128000, epoch: 51, training accuracy 0.65625
+step 128500, epoch: 51, training accuracy 0.5
+finished epoch: 52
+test accuracy 0.403021, gred: 1.03467
+('Precision', 0.39348006896305321)
+('Recall', 0.40302083333333333)
+('f1_score', 0.3938162142493305)
+confusion_matrix
+[[ 159  555  546]
+ [ 165 1746 2349]
+ [ 293 1823 1964]]
+step 129000, epoch: 52, training accuracy 0.46875
+step 129500, epoch: 52, training accuracy 0.4375
+step 130000, epoch: 52, training accuracy 0.5
+step 130500, epoch: 52, training accuracy 0.40625
+step 131000, epoch: 52, training accuracy 0.53125
+finished epoch: 53
+test accuracy 0.402917, gred: 1.03312
+('Precision', 0.39360395362665673)
+('Recall', 0.40291666666666665)
+('f1_score', 0.39396152570227722)
+confusion_matrix
+[[ 161  568  531]
+ [ 161 1782 2317]
+ [ 285 1870 1925]]
+step 131500, epoch: 53, training accuracy 0.375
+step 132000, epoch: 53, training accuracy 0.3125
+step 132500, epoch: 53, training accuracy 0.40625
+step 133000, epoch: 53, training accuracy 0.65625
+step 133500, epoch: 53, training accuracy 0.5
+finished epoch: 54
+test accuracy 0.402604, gred: 1.03649
+('Precision', 0.39560714407477399)
+('Recall', 0.40260416666666665)
+('f1_score', 0.39670538762691682)
+confusion_matrix
+[[ 202  545  513]
+ [ 200 1823 2237]
+ [ 352 1888 1840]]
+step 134000, epoch: 54, training accuracy 0.34375
+step 134500, epoch: 54, training accuracy 0.5625
+step 135000, epoch: 54, training accuracy 0.46875
+step 135500, epoch: 54, training accuracy 0.625
+step 136000, epoch: 54, training accuracy 0.59375
+finished epoch: 55
+test accuracy 0.403333, gred: 1.03254
+('Precision', 0.39375313065672152)
+('Recall', 0.40333333333333332)
+('f1_score', 0.39411330538186129)
+confusion_matrix
+[[ 157  554  549]
+ [ 160 1777 2323]
+ [ 285 1857 1938]]
+step 136500, epoch: 55, training accuracy 0.4375
+step 137000, epoch: 55, training accuracy 0.4375
+step 137500, epoch: 55, training accuracy 0.46875
+step 138000, epoch: 55, training accuracy 0.5
+step 138500, epoch: 55, training accuracy 0.5
+finished epoch: 56
+test accuracy 0.402396, gred: 1.03484
+('Precision', 0.39411973222040847)
+('Recall', 0.40239583333333334)
+('f1_score', 0.39381893644962401)
+confusion_matrix
+[[ 172  524  564]
+ [ 175 1708 2377]
+ [ 307 1790 1983]]
+step 139000, epoch: 56, training accuracy 0.625
+step 139500, epoch: 56, training accuracy 0.5625
+step 140000, epoch: 56, training accuracy 0.40625
+step 140500, epoch: 56, training accuracy 0.1875
+step 141000, epoch: 56, training accuracy 0.5625
+finished epoch: 57
+test accuracy 0.402187, gred: 1.03551
+('Precision', 0.39497550393406189)
+('Recall', 0.40218749999999998)
+('f1_score', 0.39500808170555179)
+confusion_matrix
+[[ 190  525  545]
+ [ 188 1725 2347]
+ [ 335 1799 1946]]
+step 141500, epoch: 57, training accuracy 0.46875
+step 142000, epoch: 57, training accuracy 0.375
+step 142500, epoch: 57, training accuracy 0.5
+step 143000, epoch: 57, training accuracy 0.5
+step 143500, epoch: 57, training accuracy 0.53125
+finished epoch: 58
+test accuracy 0.399792, gred: 1.03453
+('Precision', 0.39025444882395638)
+('Recall', 0.39979166666666666)
+('f1_score', 0.38970566896247827)
+confusion_matrix
+[[ 154  535  571]
+ [ 161 1664 2435]
+ [ 291 1769 2020]]
+step 144000, epoch: 58, training accuracy 0.46875
+step 144500, epoch: 58, training accuracy 0.46875
+step 145000, epoch: 58, training accuracy 0.4375
+step 145500, epoch: 58, training accuracy 0.4375
+step 146000, epoch: 58, training accuracy 0.59375
+finished epoch: 59
+test accuracy 0.401458, gred: 1.03291
+('Precision', 0.39053562770681433)
+('Recall', 0.40145833333333331)
+('f1_score', 0.38799538694410352)
+confusion_matrix
+[[ 132  502  626]
+ [ 144 1577 2539]
+ [ 250 1685 2145]]
+step 146500, epoch: 59, training accuracy 0.40625
+step 147000, epoch: 59, training accuracy 0.4375
+step 147500, epoch: 59, training accuracy 0.3125
+step 148000, epoch: 59, training accuracy 0.65625
+step 148500, epoch: 59, training accuracy 0.40625
+finished epoch: 60
+test accuracy 0.402917, gred: 1.03206
+('Precision', 0.39212948052088509)
+('Recall', 0.40291666666666665)
+('f1_score', 0.38806017394749764)
+confusion_matrix
+[[ 128  476  656]
+ [ 136 1537 2587]
+ [ 239 1638 2203]]
+step 149000, epoch: 60, training accuracy 0.40625
+step 149500, epoch: 60, training accuracy 0.5625
+step 150000, epoch: 60, training accuracy 0.375
+step 150500, epoch: 60, training accuracy 0.4375
+step 151000, epoch: 60, training accuracy 0.5
+finished epoch: 61
+test accuracy 0.4025, gred: 1.03455
+('Precision', 0.39215433739216954)
+('Recall', 0.40250000000000002)
+('f1_score', 0.38937124916580557)
+confusion_matrix
+[[ 141  483  636]
+ [ 157 1545 2558]
+ [ 282 1620 2178]]
+step 151500, epoch: 61, training accuracy 0.46875
+step 152000, epoch: 61, training accuracy 0.40625
+step 152500, epoch: 61, training accuracy 0.5
+step 153000, epoch: 61, training accuracy 0.5625
+step 153500, epoch: 61, training accuracy 0.40625
+finished epoch: 62
+test accuracy 0.403437, gred: 1.03674
+('Precision', 0.39547280233356813)
+('Recall', 0.4034375)
+('f1_score', 0.39382746904895904)
+confusion_matrix
+[[ 173  482  605]
+ [ 190 1603 2467]
+ [ 328 1655 2097]]
+step 154000, epoch: 62, training accuracy 0.34375
+step 154500, epoch: 62, training accuracy 0.34375
+step 155000, epoch: 62, training accuracy 0.375
+step 155500, epoch: 62, training accuracy 0.625
+finished epoch: 63
+test accuracy 0.404583, gred: 1.02969
+('Precision', 0.39103600752663104)
+('Recall', 0.40458333333333335)
+('f1_score', 0.39074389172834911)
+confusion_matrix
+[[ 108  535  617]
+ [ 126 1726 2408]
+ [ 220 1810 2050]]
+step 156000, epoch: 63, training accuracy 0.46875
+step 156500, epoch: 63, training accuracy 0.5
+step 157000, epoch: 63, training accuracy 0.40625
+step 157500, epoch: 63, training accuracy 0.5625
+step 158000, epoch: 63, training accuracy 0.53125
+finished epoch: 64
+test accuracy 0.406458, gred: 1.03169
+('Precision', 0.39568523669316469)
+('Recall', 0.40645833333333331)
+('f1_score', 0.39392619135137691)
+confusion_matrix
+[[ 136  503  621]
+ [ 150 1649 2461]
+ [ 250 1713 2117]]
+step 158500, epoch: 64, training accuracy 0.4375
+step 159000, epoch: 64, training accuracy 0.59375
+step 159500, epoch: 64, training accuracy 0.53125
+step 160000, epoch: 64, training accuracy 0.625
+step 160500, epoch: 64, training accuracy 0.4375
+finished epoch: 65
+test accuracy 0.404063, gred: 1.03178
+('Precision', 0.39470492089448916)
+('Recall', 0.40406249999999999)
+('f1_score', 0.39496781420707072)
+confusion_matrix
+[[ 160  530  570]
+ [ 169 1748 2343]
+ [ 298 1811 1971]]
+step 161000, epoch: 65, training accuracy 0.40625
+step 161500, epoch: 65, training accuracy 0.40625
+step 162000, epoch: 65, training accuracy 0.40625
+step 162500, epoch: 65, training accuracy 0.53125
+step 163000, epoch: 65, training accuracy 0.375
+finished epoch: 66
+test accuracy 0.403021, gred: 1.03087
+('Precision', 0.39221011672800021)
+('Recall', 0.40302083333333333)
+('f1_score', 0.3938591241426756)
+confusion_matrix
+[[ 150  588  522]
+ [ 161 1897 2202]
+ [ 284 1974 1822]]
+step 163500, epoch: 66, training accuracy 0.46875
+step 164000, epoch: 66, training accuracy 0.625
+step 164500, epoch: 66, training accuracy 0.375
+step 165000, epoch: 66, training accuracy 0.375
+step 165500, epoch: 66, training accuracy 0.5625
+finished epoch: 67
+test accuracy 0.404479, gred: 1.03037
+('Precision', 0.3936212219266928)
+('Recall', 0.40447916666666667)
+('f1_score', 0.39204264426332203)
+confusion_matrix
+[[ 134  495  631]
+ [ 149 1642 2469]
+ [ 260 1713 2107]]
+step 166000, epoch: 67, training accuracy 0.40625
+step 166500, epoch: 67, training accuracy 0.65625
+step 167000, epoch: 67, training accuracy 0.5
+step 167500, epoch: 67, training accuracy 0.4375
+step 168000, epoch: 67, training accuracy 0.625
+finished epoch: 68
+test accuracy 0.40375, gred: 1.03274
+('Precision', 0.39505003095336011)
+('Recall', 0.40375)
+('f1_score', 0.39534496625747179)
+confusion_matrix
+[[ 170  524  566]
+ [ 184 1735 2341]
+ [ 311 1798 1971]]
+step 168500, epoch: 68, training accuracy 0.375
+step 169000, epoch: 68, training accuracy 0.375
+step 169500, epoch: 68, training accuracy 0.65625
+step 170000, epoch: 68, training accuracy 0.375
+step 170500, epoch: 68, training accuracy 0.625
+finished epoch: 69
+test accuracy 0.403542, gred: 1.03452
+('Precision', 0.39602674811841543)
+('Recall', 0.40354166666666669)
+('f1_score', 0.39576359010968831)
+confusion_matrix
+[[ 186  520  554]
+ [ 191 1699 2370]
+ [ 325 1766 1989]]
+step 171000, epoch: 69, training accuracy 0.34375
+step 171500, epoch: 69, training accuracy 0.40625
+step 172000, epoch: 69, training accuracy 0.5
+step 172500, epoch: 69, training accuracy 0.4375
+step 173000, epoch: 69, training accuracy 0.53125
+finished epoch: 70
+test accuracy 0.404583, gred: 1.03093
+('Precision', 0.39441714678578027)
+('Recall', 0.40458333333333335)
+('f1_score', 0.39358536690092349)
+confusion_matrix
+[[ 143  514  603]
+ [ 149 1705 2406]
+ [ 268 1776 2036]]
+step 173500, epoch: 70, training accuracy 0.65625
+step 174000, epoch: 70, training accuracy 0.4375
+step 174500, epoch: 70, training accuracy 0.4375
+step 175000, epoch: 70, training accuracy 0.375
+step 175500, epoch: 70, training accuracy 0.46875
+finished epoch: 71
+test accuracy 0.401354, gred: 1.03879
+('Precision', 0.39652844362874817)
+('Recall', 0.40135416666666668)
+('f1_score', 0.39620381814374905)
+confusion_matrix
+[[ 226  492  542]
+ [ 236 1677 2347]
+ [ 399 1731 1950]]
+step 176000, epoch: 71, training accuracy 0.5
+step 176500, epoch: 71, training accuracy 0.5
+step 177000, epoch: 71, training accuracy 0.4375
+step 177500, epoch: 71, training accuracy 0.46875
+step 178000, epoch: 71, training accuracy 0.40625
+finished epoch: 72
+test accuracy 0.400625, gred: 1.03591
+('Precision', 0.39408481070562917)
+('Recall', 0.40062500000000001)
+('f1_score', 0.39565509074097749)
+confusion_matrix
+[[ 213  555  492]
+ [ 218 1844 2198]
+ [ 383 1908 1789]]
+step 178500, epoch: 72, training accuracy 0.53125
+step 179000, epoch: 72, training accuracy 0.40625
+step 179500, epoch: 72, training accuracy 0.40625
+step 180000, epoch: 72, training accuracy 0.4375
+step 180500, epoch: 72, training accuracy 0.375
+finished epoch: 73
+test accuracy 0.404583, gred: 1.03503
+('Precision', 0.39820838877815173)
+('Recall', 0.40458333333333335)
+('f1_score', 0.39805854965290516)
+confusion_matrix
+[[ 201  494  565]
+ [ 204 1720 2336]
+ [ 359 1758 1963]]
+step 181000, epoch: 73, training accuracy 0.375
+step 181500, epoch: 73, training accuracy 0.40625
+step 182000, epoch: 73, training accuracy 0.59375
+step 182500, epoch: 73, training accuracy 0.46875
+step 183000, epoch: 73, training accuracy 0.5625
+finished epoch: 74
+test accuracy 0.402813, gred: 1.03578
+('Precision', 0.39633169653856526)
+('Recall', 0.40281250000000002)
+('f1_score', 0.3980453729371935)
+confusion_matrix
+[[ 217  542  501]
+ [ 223 1880 2157]
+ [ 389 1921 1770]]
+step 183500, epoch: 74, training accuracy 0.40625
+step 184000, epoch: 74, training accuracy 0.59375
+step 184500, epoch: 74, training accuracy 0.40625
+step 185000, epoch: 74, training accuracy 0.375
+step 185500, epoch: 74, training accuracy 0.5
+finished epoch: 75
+test accuracy 0.405, gred: 1.03155
+('Precision', 0.39486652293565688)
+('Recall', 0.40500000000000003)
+('f1_score', 0.39588642479552488)
+confusion_matrix
+[[ 154  547  559]
+ [ 167 1838 2255]
+ [ 281 1903 1896]]
+step 186000, epoch: 75, training accuracy 0.53125
+step 186500, epoch: 75, training accuracy 0.25
+step 187000, epoch: 75, training accuracy 0.40625
+step 187500, epoch: 75, training accuracy 0.5625
+step 188000, epoch: 75, training accuracy 0.5
+finished epoch: 76
+test accuracy 0.407708, gred: 1.02909
+('Precision', 0.39638912945825172)
+('Recall', 0.40770833333333334)
+('f1_score', 0.39808878758941141)
+confusion_matrix
+[[ 149  578  533]
+ [ 158 1988 2114]
+ [ 272 2031 1777]]
+step 188500, epoch: 76, training accuracy 0.4375
+step 189000, epoch: 76, training accuracy 0.46875
+step 189500, epoch: 76, training accuracy 0.3125
+step 190000, epoch: 76, training accuracy 0.375
+step 190500, epoch: 76, training accuracy 0.5625
+finished epoch: 77
+test accuracy 0.403646, gred: 1.03461
+('Precision', 0.3967726099899298)
+('Recall', 0.40364583333333331)
+('f1_score', 0.39763640254540578)
+confusion_matrix
+[[ 200  518  542]
+ [ 205 1792 2263]
+ [ 359 1838 1883]]
+step 191000, epoch: 77, training accuracy 0.4375
+step 191500, epoch: 77, training accuracy 0.375
+step 192000, epoch: 77, training accuracy 0.375
+step 192500, epoch: 77, training accuracy 0.5
+step 193000, epoch: 77, training accuracy 0.4375
+finished epoch: 78
+test accuracy 0.403021, gred: 1.03752
+('Precision', 0.39971644776747117)
+('Recall', 0.40302083333333333)
+('f1_score', 0.39805538055571865)
+confusion_matrix
+[[ 242  455  563]
+ [ 242 1629 2389]
+ [ 425 1657 1998]]
+step 193500, epoch: 78, training accuracy 0.5
+step 194000, epoch: 78, training accuracy 0.53125
+step 194500, epoch: 78, training accuracy 0.40625
+step 195000, epoch: 78, training accuracy 0.53125
+step 195500, epoch: 78, training accuracy 0.5
+finished epoch: 79
+test accuracy 0.404687, gred: 1.03593
+('Precision', 0.39841874853415515)
+('Recall', 0.40468749999999998)
+('f1_score', 0.39705983964992969)
+confusion_matrix
+[[ 197  477  586]
+ [ 200 1644 2416]
+ [ 355 1681 2044]]
+step 196000, epoch: 79, training accuracy 0.46875
+step 196500, epoch: 79, training accuracy 0.5
+step 197000, epoch: 79, training accuracy 0.59375
+step 197500, epoch: 79, training accuracy 0.4375
+step 198000, epoch: 79, training accuracy 0.5
+finished epoch: 80
+test accuracy 0.404687, gred: 1.03183
+('Precision', 0.39571315739853552)
+('Recall', 0.40468749999999998)
+('f1_score', 0.39597994353690819)
+confusion_matrix
+[[ 165  530  565]
+ [ 170 1770 2320]
+ [ 297 1833 1950]]
+step 198500, epoch: 80, training accuracy 0.40625
+step 199000, epoch: 80, training accuracy 0.625
+step 199500, epoch: 80, training accuracy 0.53125
+step 200000, epoch: 80, training accuracy 0.46875
+step 200500, epoch: 80, training accuracy 0.375
+finished epoch: 81
+test accuracy 0.405937, gred: 1.03142
+('Precision', 0.39659210408121887)
+('Recall', 0.40593750000000001)
+('f1_score', 0.39613548190865222)
+confusion_matrix
+[[ 156  516  588]
+ [ 162 1739 2359]
+ [ 277 1801 2002]]
+step 201000, epoch: 81, training accuracy 0.25
+step 201500, epoch: 81, training accuracy 0.40625
+step 202000, epoch: 81, training accuracy 0.53125
+step 202500, epoch: 81, training accuracy 0.40625
+step 203000, epoch: 81, training accuracy 0.4375
+finished epoch: 82
+test accuracy 0.404479, gred: 1.03309
+('Precision', 0.39578762977508336)
+('Recall', 0.40447916666666667)
+('f1_score', 0.39606489110320958)
+confusion_matrix
+[[ 169  528  563]
+ [ 174 1770 2316]
+ [ 301 1835 1944]]
+step 203500, epoch: 82, training accuracy 0.5
+step 204000, epoch: 82, training accuracy 0.65625
+step 204500, epoch: 82, training accuracy 0.5
+step 205000, epoch: 82, training accuracy 0.5
+step 205500, epoch: 82, training accuracy 0.46875
+finished epoch: 83
+test accuracy 0.404687, gred: 1.03482
+('Precision', 0.39785190292000927)
+('Recall', 0.40468749999999998)
+('f1_score', 0.39814706037547687)
+confusion_matrix
+[[ 198  512  550]
+ [ 202 1746 2312]
+ [ 352 1787 1941]]
+step 206000, epoch: 83, training accuracy 0.375
+step 206500, epoch: 83, training accuracy 0.34375
+step 207000, epoch: 83, training accuracy 0.5
+step 207500, epoch: 83, training accuracy 0.40625
+finished epoch: 84
+test accuracy 0.403958, gred: 1.03501
+('Precision', 0.39749698502427805)
+('Recall', 0.40395833333333331)
+('f1_score', 0.3973344783162549)
+confusion_matrix
+[[ 201  503  556]
+ [ 202 1717 2341]
+ [ 350 1770 1960]]
+step 208000, epoch: 84, training accuracy 0.4375
+step 208500, epoch: 84, training accuracy 0.5
+step 209000, epoch: 84, training accuracy 0.40625
+step 209500, epoch: 84, training accuracy 0.53125
+step 210000, epoch: 84, training accuracy 0.53125
+finished epoch: 85
+test accuracy 0.404375, gred: 1.03896
+('Precision', 0.4005084530136534)
+('Recall', 0.40437499999999998)
+('f1_score', 0.39818142995348116)
+confusion_matrix
+[[ 230  451  579]
+ [ 234 1594 2432]
+ [ 410 1612 2058]]
+step 210500, epoch: 85, training accuracy 0.375
+step 211000, epoch: 85, training accuracy 0.40625
+step 211500, epoch: 85, training accuracy 0.4375
+step 212000, epoch: 85, training accuracy 0.40625
+step 212500, epoch: 85, training accuracy 0.46875
+finished epoch: 86
+test accuracy 0.403854, gred: 1.03476
+('Precision', 0.39777191875927392)
+('Recall', 0.40385416666666668)
+('f1_score', 0.39754768754326553)
+confusion_matrix
+[[ 204  486  570]
+ [ 214 1705 2341]
+ [ 369 1743 1968]]
+step 213000, epoch: 86, training accuracy 0.3125
+step 213500, epoch: 86, training accuracy 0.40625
+step 214000, epoch: 86, training accuracy 0.46875
+step 214500, epoch: 86, training accuracy 0.59375
+step 215000, epoch: 86, training accuracy 0.4375
+finished epoch: 87
+test accuracy 0.403542, gred: 1.03548
+('Precision', 0.39735323831684916)
+('Recall', 0.40354166666666669)
+('f1_score', 0.39671974698357892)
+confusion_matrix
+[[ 198  473  589]
+ [ 205 1691 2364]
+ [ 359 1736 1985]]
+step 215500, epoch: 87, training accuracy 0.53125
+step 216000, epoch: 87, training accuracy 0.4375
+step 216500, epoch: 87, training accuracy 0.5
+step 217000, epoch: 87, training accuracy 0.65625
+step 217500, epoch: 87, training accuracy 0.40625
+finished epoch: 88
+test accuracy 0.407813, gred: 1.0284
+('Precision', 0.39579788155244056)
+('Recall', 0.40781250000000002)
+('f1_score', 0.39731635445732022)
+confusion_matrix
+[[ 139  597  524]
+ [ 147 1998 2115]
+ [ 255 2047 1778]]
+step 218000, epoch: 88, training accuracy 0.75
+step 218500, epoch: 88, training accuracy 0.4375
+step 219000, epoch: 88, training accuracy 0.5625
+step 219500, epoch: 88, training accuracy 0.40625
+step 220000, epoch: 88, training accuracy 0.53125
+finished epoch: 89
+test accuracy 0.401875, gred: 1.03516
+('Precision', 0.39509397533182217)
+('Recall', 0.40187499999999998)
+('f1_score', 0.39662508376762134)
+confusion_matrix
+[[ 208  542  510]
+ [ 210 1852 2198]
+ [ 379 1903 1798]]
+step 220500, epoch: 89, training accuracy 0.59375
+step 221000, epoch: 89, training accuracy 0.34375
+step 221500, epoch: 89, training accuracy 0.5625
+step 222000, epoch: 89, training accuracy 0.5625
+step 222500, epoch: 89, training accuracy 0.5
+finished epoch: 90
+test accuracy 0.40125, gred: 1.0379
+('Precision', 0.39651431402881782)
+('Recall', 0.40125)
+('f1_score', 0.39722664459396251)
+confusion_matrix
+[[ 231  512  517]
+ [ 244 1755 2261]
+ [ 430 1784 1866]]
+step 223000, epoch: 90, training accuracy 0.5
+step 223500, epoch: 90, training accuracy 0.40625
+step 224000, epoch: 90, training accuracy 0.5625
+step 224500, epoch: 90, training accuracy 0.5625
+step 225000, epoch: 90, training accuracy 0.375
+finished epoch: 91
+test accuracy 0.401563, gred: 1.03512
+('Precision', 0.39503515880104795)
+('Recall', 0.40156249999999999)
+('f1_score', 0.39556145448011931)
+confusion_matrix
+[[ 201  509  550]
+ [ 206 1754 2300]
+ [ 365 1815 1900]]
+step 225500, epoch: 91, training accuracy 0.46875
+step 226000, epoch: 91, training accuracy 0.46875
+step 226500, epoch: 91, training accuracy 0.4375
+step 227000, epoch: 91, training accuracy 0.28125
+step 227500, epoch: 91, training accuracy 0.46875
+finished epoch: 92
+test accuracy 0.405625, gred: 1.03212
+('Precision', 0.3952613984386219)
+('Recall', 0.40562500000000001)
+('f1_score', 0.39539286578639582)
+confusion_matrix
+[[ 145  542  573]
+ [ 152 1796 2312]
+ [ 260 1867 1953]]
+step 228000, epoch: 92, training accuracy 0.34375
+step 228500, epoch: 92, training accuracy 0.4375
+step 229000, epoch: 92, training accuracy 0.4375
+step 229500, epoch: 92, training accuracy 0.46875
+step 230000, epoch: 92, training accuracy 0.4375
+finished epoch: 93
+test accuracy 0.402083, gred: 1.03704
+('Precision', 0.39633256744342477)
+('Recall', 0.40208333333333335)
+('f1_score', 0.39585034805780328)
+confusion_matrix
+[[ 209  496  555]
+ [ 214 1670 2376]
+ [ 383 1716 1981]]
+step 230500, epoch: 93, training accuracy 0.34375
+step 231000, epoch: 93, training accuracy 0.375
+step 231500, epoch: 93, training accuracy 0.3125
+step 232000, epoch: 93, training accuracy 0.53125
+step 232500, epoch: 93, training accuracy 0.46875
+finished epoch: 94
+test accuracy 0.402917, gred: 1.03421
+('Precision', 0.39546753090323689)
+('Recall', 0.40291666666666665)
+('f1_score', 0.39688719508858195)
+confusion_matrix
+[[ 197  546  517]
+ [ 204 1843 2213]
+ [ 351 1901 1828]]
+step 233000, epoch: 94, training accuracy 0.34375
+step 233500, epoch: 94, training accuracy 0.40625
+step 234000, epoch: 94, training accuracy 0.34375
+step 234500, epoch: 94, training accuracy 0.25
+step 235000, epoch: 94, training accuracy 0.53125
+finished epoch: 95
+test accuracy 0.403021, gred: 1.03598
+('Precision', 0.39738873667762525)
+('Recall', 0.40302083333333333)
+('f1_score', 0.3992250733408893)
+confusion_matrix
+[[ 238  548  474]
+ [ 241 1921 2098]
+ [ 423 1947 1710]]
+step 235500, epoch: 95, training accuracy 0.40625
+step 236000, epoch: 95, training accuracy 0.46875
+step 236500, epoch: 95, training accuracy 0.46875
+step 237000, epoch: 95, training accuracy 0.375
+step 237500, epoch: 95, training accuracy 0.46875
+finished epoch: 96
+test accuracy 0.4025, gred: 1.03779
+('Precision', 0.39867146857269514)
+('Recall', 0.40250000000000002)
+('f1_score', 0.3980293444646934)
+confusion_matrix
+[[ 241  483  536]
+ [ 245 1671 2344]
+ [ 426 1702 1952]]
+step 238000, epoch: 96, training accuracy 0.46875
+step 238500, epoch: 96, training accuracy 0.375
+step 239000, epoch: 96, training accuracy 0.46875
+step 239500, epoch: 96, training accuracy 0.53125
+step 240000, epoch: 96, training accuracy 0.59375
+finished epoch: 97
+test accuracy 0.405313, gred: 1.03327
+('Precision', 0.39733648346442474)
+('Recall', 0.40531250000000002)
+('f1_score', 0.39899590555017994)
+confusion_matrix
+[[ 197  559  504]
+ [ 191 1945 2124]
+ [ 343 1988 1749]]
+step 240500, epoch: 97, training accuracy 0.40625
+step 241000, epoch: 97, training accuracy 0.3125
+step 241500, epoch: 97, training accuracy 0.5625
+step 242000, epoch: 97, training accuracy 0.59375
+step 242500, epoch: 97, training accuracy 0.28125
+finished epoch: 98
+test accuracy 0.404271, gred: 1.03506
+('Precision', 0.39849389552366149)
+('Recall', 0.40427083333333336)
+('f1_score', 0.39927853658569279)
+confusion_matrix
+[[ 218  507  535]
+ [ 227 1782 2251]
+ [ 385 1814 1881]]
+step 243000, epoch: 98, training accuracy 0.46875
+step 243500, epoch: 98, training accuracy 0.40625
+step 244000, epoch: 98, training accuracy 0.59375
+step 244500, epoch: 98, training accuracy 0.625
+step 245000, epoch: 98, training accuracy 0.40625
+finished epoch: 99
+test accuracy 0.403437, gred: 1.03796
+('Precision', 0.39889569639094646)
+('Recall', 0.4034375)
+('f1_score', 0.40013943238470273)
+confusion_matrix
+[[ 244  513  503]
+ [ 247 1843 2170]
+ [ 441 1853 1786]]
+step 245500, epoch: 99, training accuracy 0.375
+step 246000, epoch: 99, training accuracy 0.28125
+step 246500, epoch: 99, training accuracy 0.53125
+step 247000, epoch: 99, training accuracy 0.375
+step 247500, epoch: 99, training accuracy 0.34375
+finished epoch: 100
+test accuracy 0.404583, gred: 1.03474
+('Precision', 0.3982430545570913)
+('Recall', 0.40458333333333335)
+('f1_score', 0.39784913884117146)
+confusion_matrix
+[[ 199  482  579]
+ [ 208 1702 2350]
+ [ 359 1738 1983]]
+step 248000, epoch: 100, training accuracy 0.4375
+step 248500, epoch: 100, training accuracy 0.5625
+step 249000, epoch: 100, training accuracy 0.46875
+step 249500, epoch: 100, training accuracy 0.46875
+step 250000, epoch: 100, training accuracy 0.59375
+finished epoch: 101
+test accuracy 0.402708, gred: 1.03596
+('Precision', 0.39737109678311006)
+('Recall', 0.40270833333333333)
+('f1_score', 0.3990192325561972)
+confusion_matrix
+[[ 236  536  488]
+ [ 245 1874 2141]
+ [ 425 1899 1756]]
+step 250500, epoch: 101, training accuracy 0.53125
+step 251000, epoch: 101, training accuracy 0.34375
+step 251500, epoch: 101, training accuracy 0.53125
+step 252000, epoch: 101, training accuracy 0.5
+step 252500, epoch: 101, training accuracy 0.5
+finished epoch: 102
+test accuracy 0.405521, gred: 1.03542
+('Precision', 0.3992092393071468)
+('Recall', 0.40552083333333333)
+('f1_score', 0.39900099645672177)
+confusion_matrix
+[[ 199  481  580]
+ [ 199 1732 2329]
+ [ 365 1753 1962]]
+step 253000, epoch: 102, training accuracy 0.40625
+step 253500, epoch: 102, training accuracy 0.40625
+step 254000, epoch: 102, training accuracy 0.40625
+step 254500, epoch: 102, training accuracy 0.53125
+step 255000, epoch: 102, training accuracy 0.4375
+finished epoch: 103
+test accuracy 0.403542, gred: 1.03673
+('Precision', 0.39949876312289379)
+('Recall', 0.40354166666666669)
+('f1_score', 0.3994424295189527)
+confusion_matrix
+[[ 238  485  537]
+ [ 241 1725 2294]
+ [ 432 1737 1911]]
+step 255500, epoch: 103, training accuracy 0.4375
+step 256000, epoch: 103, training accuracy 0.40625
+step 256500, epoch: 103, training accuracy 0.46875
+step 257000, epoch: 103, training accuracy 0.46875
+step 257500, epoch: 103, training accuracy 0.5
+finished epoch: 104
+test accuracy 0.404167, gred: 1.03534
+('Precision', 0.39905607039546381)
+('Recall', 0.40416666666666667)
+('f1_score', 0.40014474108401765)
+confusion_matrix
+[[ 230  507  523]
+ [ 234 1819 2207]
+ [ 423 1826 1831]]
+step 258000, epoch: 104, training accuracy 0.53125
+step 258500, epoch: 104, training accuracy 0.5
+step 259000, epoch: 104, training accuracy 0.40625
+step 259500, epoch: 104, training accuracy 0.34375
+finished epoch: 105
+test accuracy 0.400937, gred: 1.03699
+('Precision', 0.39677258804774107)
+('Recall', 0.4009375)
+('f1_score', 0.39779848813865742)
+confusion_matrix
+[[ 243  510  507]
+ [ 259 1801 2200]
+ [ 452 1823 1805]]
+step 260000, epoch: 105, training accuracy 0.65625
+step 260500, epoch: 105, training accuracy 0.4375
+step 261000, epoch: 105, training accuracy 0.46875
+step 261500, epoch: 105, training accuracy 0.40625
+step 262000, epoch: 105, training accuracy 0.40625
+finished epoch: 106
+test accuracy 0.405417, gred: 1.03548
+('Precision', 0.40042848144968607)
+('Recall', 0.40541666666666665)
+('f1_score', 0.39991580732573578)
+confusion_matrix
+[[ 219  478  563]
+ [ 221 1700 2339]
+ [ 403 1704 1973]]
+step 262500, epoch: 106, training accuracy 0.375
+step 263000, epoch: 106, training accuracy 0.4375
+step 263500, epoch: 106, training accuracy 0.375
+step 264000, epoch: 106, training accuracy 0.46875
+step 264500, epoch: 106, training accuracy 0.5625
+finished epoch: 107
+test accuracy 0.405833, gred: 1.03329
+('Precision', 0.39832446743601091)
+('Recall', 0.40583333333333332)
+('f1_score', 0.39975409119856747)
+confusion_matrix
+[[ 195  531  534]
+ [ 202 1835 2223]
+ [ 368 1846 1866]]
+step 265000, epoch: 107, training accuracy 0.4375
+step 265500, epoch: 107, training accuracy 0.59375
+step 266000, epoch: 107, training accuracy 0.40625
+step 266500, epoch: 107, training accuracy 0.4375
+step 267000, epoch: 107, training accuracy 0.3125
+finished epoch: 108
+test accuracy 0.404896, gred: 1.03429
+('Precision', 0.39766434163159659)
+('Recall', 0.40489583333333334)
+('f1_score', 0.39953080015204523)
+confusion_matrix
+[[ 204  532  524]
+ [ 215 1888 2157]
+ [ 382 1903 1795]]
+step 267500, epoch: 108, training accuracy 0.28125
+step 268000, epoch: 108, training accuracy 0.40625
+step 268500, epoch: 108, training accuracy 0.65625
+step 269000, epoch: 108, training accuracy 0.40625
+step 269500, epoch: 108, training accuracy 0.5625
+finished epoch: 109
+test accuracy 0.409271, gred: 1.03043
+('Precision', 0.3986607503203346)
+('Recall', 0.40927083333333331)
+('f1_score', 0.40083384725444421)
+confusion_matrix
+[[ 174  596  490]
+ [ 183 2086 1991]
+ [ 313 2098 1669]]
+step 270000, epoch: 109, training accuracy 0.34375
+step 270500, epoch: 109, training accuracy 0.34375
+step 271000, epoch: 109, training accuracy 0.5625
+step 271500, epoch: 109, training accuracy 0.59375
+step 272000, epoch: 109, training accuracy 0.40625
+finished epoch: 110
+test accuracy 0.404687, gred: 1.0349
+('Precision', 0.39708839288297687)
+('Recall', 0.40468749999999998)
+('f1_score', 0.39892435301230877)
+confusion_matrix
+[[ 197  532  531]
+ [ 209 1879 2172]
+ [ 372 1899 1809]]
+step 272500, epoch: 110, training accuracy 0.46875
+step 273000, epoch: 110, training accuracy 0.3125
+step 273500, epoch: 110, training accuracy 0.5
+step 274000, epoch: 110, training accuracy 0.59375
+step 274500, epoch: 110, training accuracy 0.34375
+finished epoch: 111
+test accuracy 0.401979, gred: 1.03663
+('Precision', 0.39599113936413272)
+('Recall', 0.40197916666666667)
+('f1_score', 0.39720529793784587)
+confusion_matrix
+[[ 216  517  527]
+ [ 218 1822 2220]
+ [ 396 1863 1821]]
+step 275000, epoch: 111, training accuracy 0.46875
+step 275500, epoch: 111, training accuracy 0.375
+step 276000, epoch: 111, training accuracy 0.65625
+step 276500, epoch: 111, training accuracy 0.5
+step 277000, epoch: 111, training accuracy 0.4375
+finished epoch: 112
+test accuracy 0.403958, gred: 1.03477
+('Precision', 0.39652930890252774)
+('Recall', 0.40395833333333331)
+('f1_score', 0.39580108935579078)
+confusion_matrix
+[[ 180  484  596]
+ [ 187 1687 2386]
+ [ 330 1739 2011]]
+step 277500, epoch: 112, training accuracy 0.53125
+step 278000, epoch: 112, training accuracy 0.25
+step 278500, epoch: 112, training accuracy 0.53125
+step 279000, epoch: 112, training accuracy 0.5
+step 279500, epoch: 112, training accuracy 0.375
+finished epoch: 113
+test accuracy 0.399896, gred: 1.03613
+('Precision', 0.39486699734352981)
+('Recall', 0.39989583333333334)
+('f1_score', 0.39661705169881456)
+confusion_matrix
+[[ 245  542  473]
+ [ 248 1906 2106]
+ [ 447 1945 1688]]
+step 280000, epoch: 113, training accuracy 0.4375
+step 280500, epoch: 113, training accuracy 0.59375
+step 281000, epoch: 113, training accuracy 0.53125
+step 281500, epoch: 113, training accuracy 0.40625
+step 282000, epoch: 113, training accuracy 0.34375
+finished epoch: 114
+test accuracy 0.400417, gred: 1.03564
+('Precision', 0.39402208239198699)
+('Recall', 0.40041666666666664)
+('f1_score', 0.39567146697450523)
+confusion_matrix
+[[ 216  538  506]
+ [ 220 1871 2169]
+ [ 390 1933 1757]]
+step 282500, epoch: 114, training accuracy 0.40625
+step 283000, epoch: 114, training accuracy 0.59375
+step 283500, epoch: 114, training accuracy 0.53125
+step 284000, epoch: 114, training accuracy 0.5
+step 284500, epoch: 114, training accuracy 0.34375
+finished epoch: 115
+test accuracy 0.401563, gred: 1.03631
+('Precision', 0.3940271352933376)
+('Recall', 0.40156249999999999)
+('f1_score', 0.39599716257256973)
+confusion_matrix
+[[ 198  553  509]
+ [ 211 1871 2178]
+ [ 381 1913 1786]]
+step 285000, epoch: 115, training accuracy 0.5
+step 285500, epoch: 115, training accuracy 0.375
+step 286000, epoch: 115, training accuracy 0.53125
+step 286500, epoch: 115, training accuracy 0.53125
+step 287000, epoch: 115, training accuracy 0.46875
+finished epoch: 116
+test accuracy 0.405625, gred: 1.03474
+('Precision', 0.39900508115304573)
+('Recall', 0.40562500000000001)
+('f1_score', 0.39916339272996237)
+confusion_matrix
+[[ 197  488  575]
+ [ 202 1750 2308]
+ [ 363 1770 1947]]
+step 287500, epoch: 116, training accuracy 0.46875
+step 288000, epoch: 116, training accuracy 0.46875
+step 288500, epoch: 116, training accuracy 0.5
+step 289000, epoch: 116, training accuracy 0.5625
+step 289500, epoch: 116, training accuracy 0.4375
+finished epoch: 117
+test accuracy 0.404271, gred: 1.03462
+('Precision', 0.39797770120869075)
+('Recall', 0.40427083333333336)
+('f1_score', 0.39849648042993552)
+confusion_matrix
+[[ 205  500  555]
+ [ 210 1764 2286]
+ [ 377 1791 1912]]
+step 290000, epoch: 117, training accuracy 0.5625
+step 290500, epoch: 117, training accuracy 0.40625
+step 291000, epoch: 117, training accuracy 0.59375
+step 291500, epoch: 117, training accuracy 0.5625
+step 292000, epoch: 117, training accuracy 0.53125
+finished epoch: 118
+test accuracy 0.401979, gred: 1.03302
+('Precision', 0.39454771638990432)
+('Recall', 0.40197916666666667)
+('f1_score', 0.39600944834013196)
+confusion_matrix
+[[ 196  537  527]
+ [ 197 1857 2206]
+ [ 359 1915 1806]]
+step 292500, epoch: 118, training accuracy 0.25
+step 293000, epoch: 118, training accuracy 0.5625
+step 293500, epoch: 118, training accuracy 0.53125
+step 294000, epoch: 118, training accuracy 0.5
+step 294500, epoch: 118, training accuracy 0.375
+finished epoch: 119
+test accuracy 0.399375, gred: 1.03924
+('Precision', 0.39585581553692256)
+('Recall', 0.39937499999999998)
+('f1_score', 0.39660124350526971)
+confusion_matrix
+[[ 249  500  511]
+ [ 263 1783 2214]
+ [ 470 1808 1802]]
+step 295000, epoch: 119, training accuracy 0.53125
+step 295500, epoch: 119, training accuracy 0.4375
+step 296000, epoch: 119, training accuracy 0.40625
+step 296500, epoch: 119, training accuracy 0.5
+step 297000, epoch: 119, training accuracy 0.53125
+finished epoch: 120
+test accuracy 0.400104, gred: 1.03537
+('Precision', 0.39403591064596261)
+('Recall', 0.40010416666666665)
+('f1_score', 0.39587164754782039)
+confusion_matrix
+[[ 222  542  496]
+ [ 235 1876 2149]
+ [ 413 1924 1743]]
+step 297500, epoch: 120, training accuracy 0.59375
+step 298000, epoch: 120, training accuracy 0.46875
+step 298500, epoch: 120, training accuracy 0.65625
+step 299000, epoch: 120, training accuracy 0.46875
+step 299500, epoch: 120, training accuracy 0.59375
+finished epoch: 121
+test accuracy 0.400625, gred: 1.03627
+('Precision', 0.39507295259006031)
+('Recall', 0.40062500000000001)
+('f1_score', 0.39558191752479671)
+confusion_matrix
+[[ 211  493  556]
+ [ 225 1741 2294]
+ [ 410 1776 1894]]
+step 300000, epoch: 121, training accuracy 0.46875
+('Total Training Time:', 1277.1823449134827)
+final_test_accuracy = 0.398125

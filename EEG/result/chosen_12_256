@@ -1,0 +1,19 @@
+method_label: 
+chosen_class: [1, 2]
+{0: 222, 1: 519, 2: 539}
+train and test data precess finished
+('time for preprocess', 50.46979022026062)
+finished epoch: 0
+test accuracy 0.323741, gred: 3.90657
+('Precision', 0.10480823973914394)
+('Recall', 0.32374100719424459)
+('f1_score', 0.1583515796058805)
+confusion_matrix
+[[   0 1980    0]
+ [   0 2700    0]
+ [   0 3660    0]]
+('precision_each_class', [0.0, 0.3237410071942446, 0.0])
+('recall_each_class', [0.0, 1.0, 0.0])
+('f1_score', [0, 0.4891304347826087, 0])
+step 500, epoch: 0, training accuracy 0.4375
+('Total Training Time:', 1.274590015411377)

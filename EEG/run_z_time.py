@@ -42,7 +42,7 @@ for i in range(300000):
         print("step %d, epoch: %d, training accuracy %g"%(i+1, train_NP.get_epoch(), train_accuracy))
     elif train_NP.get_epoch() > last_epoch:
         last_epoch = train_NP.get_epoch()
-        test_batch = test_NP.next_batch(512)
+        test_batch = test_NP.next_batch(1024)
         print("finished epoch: %d"%last_epoch)
         print("test accuracy %g"%accuracy.eval(feed_dict={x: test_batch[0], y_: test_batch[1], keep_prob: 1.0}))
     else:  # Record a summary

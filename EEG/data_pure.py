@@ -19,9 +19,9 @@ def to_x(data):
     return data
 
 def to_y(data):
-    data.resize(len(data) * 40, 3)
+    data.resize(len(data) * 40, 4)
     value_class = map(lambda x: 0 if x <= 3.0 else 1 if x <= 6.0 else 2,
-            data[:, 4])
+            data[:, 0])
     unique, counts = np.unique(value_class, return_counts=True)
     print(dict(zip(unique, counts)))
     n_data = len(value_class)

@@ -179,10 +179,10 @@ class SimpleDNNModel(object):
             self.FC1.update(*sess.run([self.FC1.Weight, self.FC1.Bias]))
 
 from genetic_subtree import *
-n_model = 50
-n_generation = 20
-n_survive = 40
-n_crossover = 15
+n_model = 10
+n_generation = 2
+n_survive = 8
+n_crossover = 10
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
 winner = []

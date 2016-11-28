@@ -8,7 +8,7 @@ freq_bin = [(1, 3), (4, 7), (8, 13), (14, 30), (31, 50)]
 def to_x(data):
     data.resize(len(data) * 40, 40, 8064)
     sz_data = np.shape(data)
-    res_data = np.zeros((sz_data[0] * 63 * 5, 10, 9, 1))
+    res_data = np.zeros((sz_data[0] * 63, 10, 9, 5))
     for sample_idx in range(sz_data[0]):
         for channel_idx in range(32):
             dst_y, dst_x = egg_pos[channel_idx+1]
@@ -20,10 +20,9 @@ def to_x(data):
                 for freq_channel in range(5):
                     start, end = freq_bin[freq_channel]
                     freq = FFT[start: end+1]
-                    res_data[sample_idx * n_span + time_frame * 5 + freq_channel, 
+                    res_data[sample_idx * n_span + time_frame, 
                             dst_y, 
-                            dst_x, 0] = np.vdot(freq, freq)
-    print np.shape(res_data)
+                            dst_x, freq_channel] = np.vdot(freq, freq)
     return res_data
 
 def to_y(data):

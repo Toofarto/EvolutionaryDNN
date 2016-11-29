@@ -66,7 +66,7 @@ else:
     whole_x = to_x(np.array(map(lambda x: x["data"], whole_data)))
     cPickle.dump(whole_x, open(pre_x_filename, 'wb'))
 
-cut_off = [26 * 40 * 60, 29 * 40 * 60]
+cut_off = [25 * 40 * 60, 29 * 40 * 60]
 #cut_off = int(len(whole_x) * float(28) / 32)
 train_x = whole_x[:cut_off[0], :]
 train_y = whole_y[:cut_off[0], :]
@@ -139,9 +139,10 @@ class SimpleDNNModel(object):
         self.y_ = tf.placeholder(tf.float32, shape=[None, self.sz_y], name="y-input")
         self.keep_prob = tf.placeholder(tf.float32)
 
-        self.FC1.load(self.x, 256, tf.nn.relu)
-        fc1_drop = tf.nn.dropout(self.FC1.layer, self.keep_prob)
-        network = full_connect_layer(fc1_drop, self.sz_y, tf.nn.softmax)
+        self.FC1.load(self.x, 128, tf.nn.relu)
+        # fc1_drop = tf.nn.dropout(self.FC1.layer, self.keep_prob)
+        # network = full_connect_layer(fc1_drop, self.sz_y, tf.nn.softmax)
+        network = full_connect_layer(self.FC1.layer, self.sz_y, tf.nn.softmax)
 
         self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.y_ * tf.log(network), reduction_indices=[1]))
         self.train_step = tf.train.MomentumOptimizer(5e-6, 0.8).minimize(self.cross_entropy)
@@ -158,7 +159,7 @@ class SimpleDNNModel(object):
             for i in range(max_step):
                 batch = train_NP.next_batch(32)
                 if i%500 == 499:
-                    train_accuracy = self.accuracy.eval(feed_dict = {self.x: batch[0], self.y_: batch[1], self.keep_prob: 1.0}, session=sess)
+                    self.train_accuracy = self.accuracy.eval(feed_dict = {self.x: batch[0], self.y_: batch[1], self.keep_prob: 1.0}, session=sess)
                     #print("step %d, epoch: %d, training accuracy %g"%(i+1, train_NP.get_epoch(), train_accuracy))
                 elif train_NP.get_epoch() > last_epoch:
                     last_epoch = train_NP.get_epoch()
@@ -179,23 +180,29 @@ class SimpleDNNModel(object):
             self.FC1.update(*sess.run([self.FC1.Weight, self.FC1.Bias]))
 
 from genetic_subtree import *
-n_model = 10
-n_generation = 2
-n_survive = 8
-n_crossover = 10
+from copy import *
+n_model = 20
+n_generation = 40
+n_survive = 16
+n_crossover = 15
+print "n_model: %d, n_generation: %d, n_survive: %d, n_crossover: %d"%(n_model, n_generation, n_survive, n_crossover)
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
 winner = []
 for iter_gen in range(n_generation):
     for model in Models:
-        model.fitting(train_balance_NP, test_NP, max_step = 10000)
-        print "Generation: %d, fitness: %f"%(iter_gen, model.fitness)
+        model.fitting(train_balance_NP, test_NP, max_step = 1000)
+        print "Generation: %d, train accuracy: %f, test accuracy: %f, fitness: %f"%(iter_gen, model.train_accuracy, model.test_evaluation.accuracy, model.fitness)
     Models.sort(key = lambda x:x.fitness, reverse=True)
     print "#%d, Best fitness (accuracy of validation): %f"%(iter_gen, Models[0].fitness)
     Models[0].test_evaluation.display()
     print "Time spent on this generation", time.time() - time_start_generation
     time_start_generation = time.time()
-    winner.append(Models[0])
+    # TODO: Deep copy it
+    # winner.append(deepcopy(Models[0]))
+    with open('/data/klng/git/EvolutionaryDNN/store_model/%s_%d'%(worker_name, n_generation) , 'wb') as f:
+        import dill
+        dill.dump(winner, f)
     # Crossover
     for i in range(0, n_survive, 2):
         weight1, bias1 = Models[i].FC1.get()
@@ -207,4 +214,3 @@ for iter_gen in range(n_generation):
     print "Time spent on crossove:", time.time() - time_start_generation
     for i in range(n_survive, n_model):
         Models[i] = SimpleDNNModel(sz_x, sz_y, n_GPU)
-cPickle.dump(winner, '/data/klng/git/EvolutionaryDNN/store_model/' + worker_name)

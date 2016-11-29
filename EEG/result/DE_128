@@ -1,0 +1,304 @@
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.440556, fitness: 0.331250
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.462778, fitness: 0.347708
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.382500, fitness: 0.310208
+Generation: 0, train accuracy: 0.312500, test accuracy: 0.465278, fitness: 0.326250
+Generation: 0, train accuracy: 0.406250, test accuracy: 0.399444, fitness: 0.342500
+Generation: 0, train accuracy: 0.406250, test accuracy: 0.386111, fitness: 0.348333
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.379444, fitness: 0.292500
+Generation: 0, train accuracy: 0.281250, test accuracy: 0.327778, fitness: 0.336250
+Generation: 0, train accuracy: 0.281250, test accuracy: 0.397083, fitness: 0.462396
+Generation: 0, train accuracy: 0.406250, test accuracy: 0.453889, fitness: 0.307708
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.442917, fitness: 0.322396
+Generation: 0, train accuracy: 0.343750, test accuracy: 0.370694, fitness: 0.309583
+Generation: 0, train accuracy: 0.437500, test accuracy: 0.400278, fitness: 0.326875
+Generation: 0, train accuracy: 0.281250, test accuracy: 0.356389, fitness: 0.312604
+Generation: 0, train accuracy: 0.531250, test accuracy: 0.406250, fitness: 0.308333
+Generation: 0, train accuracy: 0.406250, test accuracy: 0.507500, fitness: 0.416771
+Generation: 0, train accuracy: 0.468750, test accuracy: 0.462639, fitness: 0.382708
+Generation: 0, train accuracy: 0.500000, test accuracy: 0.481944, fitness: 0.336458
+Generation: 0, train accuracy: 0.312500, test accuracy: 0.423889, fitness: 0.382708
+#0, Best fitness (accuracy of validation): 0.462396
+=============Start==================
+Confusion Matrix:
+[[  82  194  384]
+ [ 847 1246 1567]
+ [ 466  883 1531]]
+Average Accuracy: 0.397083
+Average Precision: 0.453921708029
+Average Recall: 0.397083333333
+Average F1: 0.411561239601
+=============End====================
+Time spent on this generation 1464.04316092
+Time spent on crossove: 0.000762939453125
+Generation: 1, train accuracy: 0.437500, test accuracy: 0.376250, fitness: 0.311771
+Generation: 1, train accuracy: 0.406250, test accuracy: 0.479028, fitness: 0.287187
+Generation: 1, train accuracy: 0.281250, test accuracy: 0.451389, fitness: 0.453333
+Generation: 1, train accuracy: 0.406250, test accuracy: 0.405139, fitness: 0.320625
+Generation: 1, train accuracy: 0.531250, test accuracy: 0.398611, fitness: 0.303229
+Generation: 1, train accuracy: 0.375000, test accuracy: 0.430833, fitness: 0.247187
+Generation: 1, train accuracy: 0.343750, test accuracy: 0.414583, fitness: 0.285729
+Generation: 1, train accuracy: 0.531250, test accuracy: 0.478333, fitness: 0.347083
+Generation: 1, train accuracy: 0.375000, test accuracy: 0.452361, fitness: 0.333646
+Generation: 1, train accuracy: 0.468750, test accuracy: 0.275694, fitness: 0.453021
+Generation: 1, train accuracy: 0.312500, test accuracy: 0.409861, fitness: 0.281979
+Generation: 1, train accuracy: 0.375000, test accuracy: 0.499167, fitness: 0.347083
+Generation: 1, train accuracy: 0.406250, test accuracy: 0.410556, fitness: 0.336979
+Generation: 1, train accuracy: 0.437500, test accuracy: 0.416250, fitness: 0.355104
+Generation: 1, train accuracy: 0.375000, test accuracy: 0.427917, fitness: 0.367396
+Generation: 1, train accuracy: 0.343750, test accuracy: 0.380000, fitness: 0.339792
+Generation: 1, train accuracy: 0.468750, test accuracy: 0.407639, fitness: 0.430625
+Generation: 1, train accuracy: 0.437500, test accuracy: 0.460139, fitness: 0.387604
+Generation: 1, train accuracy: 0.625000, test accuracy: 0.473056, fitness: 0.262083
+Generation: 1, train accuracy: 0.312500, test accuracy: 0.353889, fitness: 0.456042
+#1, Best fitness (accuracy of validation): 0.456042
+=============Start==================
+Confusion Matrix:
+[[  92  182  386]
+ [1199 1215 1246]
+ [ 672  967 1241]]
+Average Accuracy: 0.353889
+Average Precision: 0.4383399008
+Average Recall: 0.353888888889
+Average F1: 0.384055909584
+=============End====================
+Time spent on this generation 1201.31787801
+Time spent on crossove: 0.000900983810425
+Generation: 2, train accuracy: 0.343750, test accuracy: 0.462361, fitness: 0.362917
+Generation: 2, train accuracy: 0.562500, test accuracy: 0.423472, fitness: 0.300625
+Generation: 2, train accuracy: 0.375000, test accuracy: 0.360000, fitness: 0.302188
+Generation: 2, train accuracy: 0.500000, test accuracy: 0.477361, fitness: 0.346667
+Generation: 2, train accuracy: 0.437500, test accuracy: 0.437639, fitness: 0.273542
+Generation: 2, train accuracy: 0.375000, test accuracy: 0.449722, fitness: 0.386875
+Generation: 2, train accuracy: 0.250000, test accuracy: 0.409583, fitness: 0.301250
+Generation: 2, train accuracy: 0.500000, test accuracy: 0.421944, fitness: 0.368958
+Generation: 2, train accuracy: 0.406250, test accuracy: 0.441667, fitness: 0.324896
+Generation: 2, train accuracy: 0.343750, test accuracy: 0.325694, fitness: 0.344687
+Generation: 2, train accuracy: 0.468750, test accuracy: 0.394167, fitness: 0.313542
+Generation: 2, train accuracy: 0.406250, test accuracy: 0.454583, fitness: 0.272917
+Generation: 2, train accuracy: 0.312500, test accuracy: 0.480972, fitness: 0.351354
+Generation: 2, train accuracy: 0.406250, test accuracy: 0.411111, fitness: 0.261875
+Generation: 2, train accuracy: 0.375000, test accuracy: 0.412361, fitness: 0.269479
+Generation: 2, train accuracy: 0.468750, test accuracy: 0.401111, fitness: 0.281250
+Generation: 2, train accuracy: 0.406250, test accuracy: 0.430556, fitness: 0.354479
+Generation: 2, train accuracy: 0.312500, test accuracy: 0.406944, fitness: 0.291875
+Generation: 2, train accuracy: 0.406250, test accuracy: 0.430694, fitness: 0.372708
+Generation: 2, train accuracy: 0.562500, test accuracy: 0.385417, fitness: 0.306458
+#2, Best fitness (accuracy of validation): 0.386875
+=============Start==================
+Confusion Matrix:
+[[  46  491  123]
+ [ 307 2616  737]
+ [ 196 2108  576]]
+Average Accuracy: 0.449722
+Average Precision: 0.423121520039
+Average Recall: 0.449722222222
+Average F1: 0.413414224884
+=============End====================
+Time spent on this generation 1226.66214395
+Time spent on crossove: 0.00108504295349
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.456667, fitness: 0.238438
+Generation: 3, train accuracy: 0.406250, test accuracy: 0.464444, fitness: 0.280208
+Generation: 3, train accuracy: 0.468750, test accuracy: 0.454861, fitness: 0.415312
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.424444, fitness: 0.301250
+Generation: 3, train accuracy: 0.500000, test accuracy: 0.442917, fitness: 0.423125
+Generation: 3, train accuracy: 0.531250, test accuracy: 0.408750, fitness: 0.362812
+Generation: 3, train accuracy: 0.531250, test accuracy: 0.457917, fitness: 0.265938
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.340278, fitness: 0.377187
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.486250, fitness: 0.308021
+Generation: 3, train accuracy: 0.250000, test accuracy: 0.403750, fitness: 0.338958
+Generation: 3, train accuracy: 0.343750, test accuracy: 0.428750, fitness: 0.423542
+Generation: 3, train accuracy: 0.375000, test accuracy: 0.418333, fitness: 0.324479
+Generation: 3, train accuracy: 0.375000, test accuracy: 0.370972, fitness: 0.317083
+Generation: 3, train accuracy: 0.500000, test accuracy: 0.466806, fitness: 0.351979
+Generation: 3, train accuracy: 0.375000, test accuracy: 0.266250, fitness: 0.405729
+Generation: 3, train accuracy: 0.468750, test accuracy: 0.422083, fitness: 0.327812
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.410417, fitness: 0.384167
+Generation: 3, train accuracy: 0.437500, test accuracy: 0.399583, fitness: 0.385312
+Generation: 3, train accuracy: 0.218750, test accuracy: 0.461806, fitness: 0.362396
+Generation: 3, train accuracy: 0.468750, test accuracy: 0.487778, fitness: 0.328542
+#3, Best fitness (accuracy of validation): 0.423542
+=============Start==================
+Confusion Matrix:
+[[  60  464  136]
+ [ 219 2095 1346]
+ [ 230 1718  932]]
+Average Accuracy: 0.42875
+Average Precision: 0.414234549004
+Average Recall: 0.42875
+Average F1: 0.418601299351
+=============End====================
+Time spent on this generation 1239.16125107
+Time spent on crossove: 0.000728130340576
+Generation: 4, train accuracy: 0.437500, test accuracy: 0.455833, fitness: 0.331979
+Generation: 4, train accuracy: 0.531250, test accuracy: 0.391528, fitness: 0.336771
+Generation: 4, train accuracy: 0.375000, test accuracy: 0.453611, fitness: 0.356771
+Generation: 4, train accuracy: 0.406250, test accuracy: 0.472500, fitness: 0.263021
+Generation: 4, train accuracy: 0.437500, test accuracy: 0.389444, fitness: 0.285313
+Generation: 4, train accuracy: 0.437500, test accuracy: 0.362500, fitness: 0.328854
+Generation: 4, train accuracy: 0.312500, test accuracy: 0.381528, fitness: 0.248542
+Generation: 4, train accuracy: 0.375000, test accuracy: 0.460278, fitness: 0.414688
+Generation: 4, train accuracy: 0.312500, test accuracy: 0.350833, fitness: 0.286667
+Generation: 4, train accuracy: 0.500000, test accuracy: 0.369444, fitness: 0.372813
+Generation: 4, train accuracy: 0.218750, test accuracy: 0.446667, fitness: 0.438229
+Generation: 4, train accuracy: 0.281250, test accuracy: 0.393472, fitness: 0.341875
+Generation: 4, train accuracy: 0.281250, test accuracy: 0.477917, fitness: 0.392708
+Generation: 4, train accuracy: 0.375000, test accuracy: 0.410833, fitness: 0.303333
+Generation: 4, train accuracy: 0.343750, test accuracy: 0.377500, fitness: 0.288229
+Generation: 4, train accuracy: 0.312500, test accuracy: 0.490278, fitness: 0.271250
+Generation: 4, train accuracy: 0.437500, test accuracy: 0.430972, fitness: 0.281146
+Generation: 4, train accuracy: 0.281250, test accuracy: 0.423472, fitness: 0.381563
+Generation: 4, train accuracy: 0.312500, test accuracy: 0.404583, fitness: 0.352083
+Generation: 4, train accuracy: 0.375000, test accuracy: 0.409444, fitness: 0.297396
+#4, Best fitness (accuracy of validation): 0.438229
+=============Start==================
+Confusion Matrix:
+[[  41  240  379]
+ [ 403 1861 1396]
+ [ 255 1311 1314]]
+Average Accuracy: 0.446667
+Average Precision: 0.452788064735
+Average Recall: 0.446666666667
+Average F1: 0.449177222236
+=============End====================
+Time spent on this generation 1163.46085501
+Time spent on crossove: 0.000760078430176
+Generation: 5, train accuracy: 0.406250, test accuracy: 0.468056, fitness: 0.398646
+Generation: 5, train accuracy: 0.500000, test accuracy: 0.382083, fitness: 0.346042
+Generation: 5, train accuracy: 0.406250, test accuracy: 0.480694, fitness: 0.309167
+Generation: 5, train accuracy: 0.468750, test accuracy: 0.323889, fitness: 0.411458
+Generation: 5, train accuracy: 0.343750, test accuracy: 0.495694, fitness: 0.348125
+Generation: 5, train accuracy: 0.406250, test accuracy: 0.448194, fitness: 0.350833
+Generation: 5, train accuracy: 0.375000, test accuracy: 0.411250, fitness: 0.266250
+Generation: 5, train accuracy: 0.343750, test accuracy: 0.395417, fitness: 0.300729
+Generation: 5, train accuracy: 0.437500, test accuracy: 0.401389, fitness: 0.304896
+Generation: 5, train accuracy: 0.375000, test accuracy: 0.494306, fitness: 0.390521
+Generation: 5, train accuracy: 0.343750, test accuracy: 0.409028, fitness: 0.422604
+Generation: 5, train accuracy: 0.312500, test accuracy: 0.452639, fitness: 0.271979
+Generation: 5, train accuracy: 0.343750, test accuracy: 0.423611, fitness: 0.272708
+Generation: 5, train accuracy: 0.375000, test accuracy: 0.319028, fitness: 0.366458
+Generation: 5, train accuracy: 0.468750, test accuracy: 0.338611, fitness: 0.301771
+Generation: 5, train accuracy: 0.312500, test accuracy: 0.396111, fitness: 0.369479
+Generation: 5, train accuracy: 0.468750, test accuracy: 0.409028, fitness: 0.329375
+Generation: 5, train accuracy: 0.437500, test accuracy: 0.408611, fitness: 0.298125
+Generation: 5, train accuracy: 0.406250, test accuracy: 0.379583, fitness: 0.273542
+Generation: 5, train accuracy: 0.312500, test accuracy: 0.379028, fitness: 0.304479
+#5, Best fitness (accuracy of validation): 0.422604
+=============Start==================
+Confusion Matrix:
+[[  32  253  375]
+ [ 365 1452 1843]
+ [ 275 1144 1461]]
+Average Accuracy: 0.409028
+Average Precision: 0.42228595135
+Average Recall: 0.409027777778
+Average F1: 0.409395970728
+=============End====================
+Time spent on this generation 1190.15774298
+Time spent on crossove: 0.00218915939331
+Generation: 6, train accuracy: 0.187500, test accuracy: 0.448056, fitness: 0.325000
+Generation: 6, train accuracy: 0.437500, test accuracy: 0.400000, fitness: 0.296979
+Generation: 6, train accuracy: 0.406250, test accuracy: 0.404722, fitness: 0.349167
+Generation: 6, train accuracy: 0.468750, test accuracy: 0.366806, fitness: 0.348229
+Generation: 6, train accuracy: 0.343750, test accuracy: 0.443333, fitness: 0.318333
+Generation: 6, train accuracy: 0.593750, test accuracy: 0.422361, fitness: 0.297812
+Generation: 6, train accuracy: 0.406250, test accuracy: 0.398056, fitness: 0.398333
+Generation: 6, train accuracy: 0.281250, test accuracy: 0.410556, fitness: 0.335312
+Generation: 6, train accuracy: 0.468750, test accuracy: 0.444722, fitness: 0.345104
+Generation: 6, train accuracy: 0.281250, test accuracy: 0.434722, fitness: 0.348021
+Generation: 6, train accuracy: 0.312500, test accuracy: 0.335139, fitness: 0.275729
+Generation: 6, train accuracy: 0.312500, test accuracy: 0.470278, fitness: 0.324792
+Generation: 6, train accuracy: 0.531250, test accuracy: 0.424722, fitness: 0.268021
+Generation: 6, train accuracy: 0.187500, test accuracy: 0.460139, fitness: 0.438229
+Generation: 6, train accuracy: 0.406250, test accuracy: 0.470278, fitness: 0.366250
+Generation: 6, train accuracy: 0.312500, test accuracy: 0.335417, fitness: 0.304062
+Generation: 6, train accuracy: 0.312500, test accuracy: 0.456667, fitness: 0.335000
+Generation: 6, train accuracy: 0.343750, test accuracy: 0.464583, fitness: 0.351667
+Generation: 6, train accuracy: 0.437500, test accuracy: 0.357500, fitness: 0.296250
+Generation: 6, train accuracy: 0.343750, test accuracy: 0.399028, fitness: 0.363646
+#6, Best fitness (accuracy of validation): 0.438229
+=============Start==================
+Confusion Matrix:
+[[ 123  328  209]
+ [ 378 2392  890]
+ [ 383 1699  798]]
+Average Accuracy: 0.460139
+Average Precision: 0.456180500219
+Average Recall: 0.460138888889
+Average F1: 0.449256133516
+=============End====================
+Time spent on this generation 1179.36399007
+Time spent on crossove: 0.000776052474976
+Generation: 7, train accuracy: 0.312500, test accuracy: 0.397778, fitness: 0.483021
+Generation: 7, train accuracy: 0.437500, test accuracy: 0.433750, fitness: 0.303125
+Generation: 7, train accuracy: 0.562500, test accuracy: 0.451528, fitness: 0.445833
+Generation: 7, train accuracy: 0.250000, test accuracy: 0.482639, fitness: 0.267917
+Generation: 7, train accuracy: 0.468750, test accuracy: 0.337083, fitness: 0.322083
+Generation: 7, train accuracy: 0.531250, test accuracy: 0.419722, fitness: 0.322812
+Generation: 7, train accuracy: 0.375000, test accuracy: 0.405000, fitness: 0.379792
+Generation: 7, train accuracy: 0.343750, test accuracy: 0.420417, fitness: 0.343021
+Generation: 7, train accuracy: 0.312500, test accuracy: 0.468889, fitness: 0.304583
+Generation: 7, train accuracy: 0.375000, test accuracy: 0.435000, fitness: 0.301667
+Generation: 7, train accuracy: 0.250000, test accuracy: 0.440833, fitness: 0.386875
+Generation: 7, train accuracy: 0.437500, test accuracy: 0.430278, fitness: 0.278229
+Generation: 7, train accuracy: 0.312500, test accuracy: 0.395278, fitness: 0.305625
+Generation: 7, train accuracy: 0.500000, test accuracy: 0.460278, fitness: 0.285208
+Generation: 7, train accuracy: 0.406250, test accuracy: 0.445000, fitness: 0.384271
+Generation: 7, train accuracy: 0.343750, test accuracy: 0.475000, fitness: 0.425729
+Generation: 7, train accuracy: 0.343750, test accuracy: 0.416528, fitness: 0.407813
+Generation: 7, train accuracy: 0.343750, test accuracy: 0.415278, fitness: 0.351250
+Generation: 7, train accuracy: 0.437500, test accuracy: 0.455556, fitness: 0.358646
+Generation: 7, train accuracy: 0.500000, test accuracy: 0.484444, fitness: 0.398021
+#7, Best fitness (accuracy of validation): 0.483021
+=============Start==================
+Confusion Matrix:
+[[ 163  230  267]
+ [ 982 1686  992]
+ [ 745 1120 1015]]
+Average Accuracy: 0.397778
+Average Precision: 0.468741445255
+Average Recall: 0.397777777778
+Average F1: 0.425255140083
+=============End====================
+Time spent on this generation 1186.43232083
+Time spent on crossove: 0.000805139541626
+Generation: 8, train accuracy: 0.468750, test accuracy: 0.357222, fitness: 0.362917
+Generation: 8, train accuracy: 0.312500, test accuracy: 0.442361, fitness: 0.407083
+Generation: 8, train accuracy: 0.343750, test accuracy: 0.286806, fitness: 0.427500
+Generation: 8, train accuracy: 0.468750, test accuracy: 0.360556, fitness: 0.381667
+Generation: 8, train accuracy: 0.312500, test accuracy: 0.441111, fitness: 0.374792
+Generation: 8, train accuracy: 0.406250, test accuracy: 0.433889, fitness: 0.338437
+Generation: 8, train accuracy: 0.562500, test accuracy: 0.381667, fitness: 0.455729
+Generation: 8, train accuracy: 0.593750, test accuracy: 0.454167, fitness: 0.267604
+Generation: 8, train accuracy: 0.531250, test accuracy: 0.390278, fitness: 0.352188
+Generation: 8, train accuracy: 0.468750, test accuracy: 0.347361, fitness: 0.357396
+Generation: 8, train accuracy: 0.343750, test accuracy: 0.463194, fitness: 0.373125
+Generation: 8, train accuracy: 0.406250, test accuracy: 0.390972, fitness: 0.305625
+Generation: 8, train accuracy: 0.437500, test accuracy: 0.372778, fitness: 0.368750
+Generation: 8, train accuracy: 0.437500, test accuracy: 0.428611, fitness: 0.296875
+Generation: 8, train accuracy: 0.437500, test accuracy: 0.457778, fitness: 0.281354
+Generation: 8, train accuracy: 0.437500, test accuracy: 0.409028, fitness: 0.419375
+Generation: 8, train accuracy: 0.406250, test accuracy: 0.456528, fitness: 0.301042
+Generation: 8, train accuracy: 0.593750, test accuracy: 0.384583, fitness: 0.395521
+Generation: 8, train accuracy: 0.343750, test accuracy: 0.474167, fitness: 0.440521
+Generation: 8, train accuracy: 0.250000, test accuracy: 0.459028, fitness: 0.468125
+#8, Best fitness (accuracy of validation): 0.468125
+=============Start==================
+Confusion Matrix:
+[[  14  464  182]
+ [ 140 2721  799]
+ [  99 2211  570]]
+Average Accuracy: 0.459028
+Average Precision: 0.408407793112
+Average Recall: 0.459027777778
+Average F1: 0.411194062283
+=============End====================
+Time spent on this generation 1202.85607505
+Time spent on crossove: 0.000870943069458
+Generation: 9, train accuracy: 0.468750, test accuracy: 0.403889, fitness: 0.321979
+Generation: 9, train accuracy: 0.437500, test accuracy: 0.298889, fitness: 0.413333
+Generation: 9, train accuracy: 0.343750, test accuracy: 0.473889, fitness: 0.304688
+Generation: 9, train accuracy: 0.500000, test accuracy: 0.390556, fitness: 0.415104
+Generation: 9, train accuracy: 0.406250, test accuracy: 0.405278, fitness: 0.295208
+Generation: 9, train accuracy: 0.531250, test accuracy: 0.339444, fitness: 0.274271
+Generation: 9, train accuracy: 0.375000, test accuracy: 0.285972, fitness: 0.363438
+

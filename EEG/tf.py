@@ -22,7 +22,8 @@ def weight_variable(shape, sz = 20.0):
     return tf.Variable(initial, name="weight")
 
 def bias_variable(shape):
-    initial = tf.constant(0.0, shape=shape)
+    #initial = tf.constant(0.0, shape=shape)
+    initial = tf.zeros(shape)
     return tf.Variable(initial, name="bias")
 
 def max_pool_2x2(x, name = ""):

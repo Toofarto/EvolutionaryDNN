@@ -3,7 +3,8 @@ import cPickle
 import data_lib
 
 def unpickle(file):
-    fo = open(file, 'rb') dict = cPickle.load(fo)
+    fo = open(file, 'rb') 
+    dict = cPickle.load(fo)
     fo.close()
     return dict
 
@@ -39,18 +40,18 @@ def to_x(data):
                     DE = np.log(np.real(np.vdot(freq, freq)))
                     res_data[60*sample_idx + time_frame, dst_x, dis_y, freq_channel] = DE
     sz_resdata = np.shape(res_data)
-    for i in range(sz_resdata[0]):
-        for y in range(9):
-            for x in range(9):
-                for ch_idx in range(5):
-                    if res_data[i, x, y, ch_idx] == 0:
-                        sums, cnt = 0.0, 0
-                        for j in range(len(dx)):
-                            nx, ny = x + dx[j], y + dy[j]
-                            if nx not in range(9) or ny not in range(9): continue
-                            sums += res_data[i, nx, ny, ch_idx]
-                            cnt += 1
-                        if cnt != 0: res_data[i, x, y, ch_idx] = sums / cnt
+    # for i in range(sz_resdata[0]):
+    #     for y in range(9):
+    #         for x in range(9):
+    #             for ch_idx in range(5):
+    #                 if res_data[i, x, y, ch_idx] == 0:
+    #                     sums, cnt = 0.0, 0
+    #                     for j in range(len(dx)):
+    #                         nx, ny = x + dx[j], y + dy[j]
+    #                         if nx not in range(9) or ny not in range(9): continue
+    #                         sums += res_data[i, nx, ny, ch_idx]
+    #                         cnt += 1
+    #                     if cnt != 0: res_data[i, x, y, ch_idx] = sums / cnt
     return normalize(res_data)
 
 def normalize(res_data):
@@ -68,5 +69,5 @@ def normalize(res_data):
 pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/EEG_data/'
 whole_data = np.array([unpickle(pre_batch + 's%.2d.dat'%i) for i in range(1, 32 + 1)])
 res_x = to_x(np.array(map(lambda x: x["data"], whole_data)))
-with open(pre_batch + 'graph_de_normalized.dat', 'wb') as f:
+with open(pre_batch + 'graph_de_left_normalized.dat', 'wb') as f:
     cPickle.dump(res_x, f)

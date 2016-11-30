@@ -195,7 +195,7 @@ n_model = 20
 n_generation = 100
 crossover_rate = 0.5
 change_prop = 0.3
-max_step = 700-0
+max_step = 7000
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
 for i in range(len(Models)):

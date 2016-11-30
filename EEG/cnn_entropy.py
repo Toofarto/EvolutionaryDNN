@@ -33,7 +33,7 @@ whole_data = np.array([unpickle(pre_batch + 's%.2d.dat'%i) for i in range(1, 32 
 whole_y = to_y(map(lambda x: x["labels"], whole_data))
 
 # features
-pre_x_filename = pre_batch + 'graph_de_normalized.dat'
+pre_x_filename = pre_batch + 'graph_de_left_normalized.dat'
 if os.path.isfile(pre_x_filename):
     whole_x = cPickle.load(open(pre_x_filename, 'rb'))
 else:
@@ -110,6 +110,10 @@ class SimpleDNNModel(object):
         self.x = tf.placeholder(tf.float32, shape=[None, 9, 9, 5], name="x-input")
         self.y_ = tf.placeholder(tf.float32, shape=[None, 3], name="y-input")
         self.keep_prob = tf.placeholder(tf.float32)
+
+        network = self.x
+
+        network = max_pool_2x2(network)
 
         network = conv_layer(self.x, 64, 3, tf.nn.relu)
         network = tf.nn.dropout(network, self.keep_prob)

@@ -82,8 +82,8 @@ train_balaced_x = np.concatenate(train_easy_x)
 train_balaced_y = np.concatenate(train_easy_y)
 train_balance_NP = NP_Dataset(train_balaced_x, train_balaced_y)
 
-validation_NP = NP_Dataset(whole_x[cut_off[0]:cut_off[1], :], whole_y[cut_off[0]:cut_off[1]:, :])
-test_NP = NP_Dataset(whole_x[cut_off[1]:, :], whole_y[cut_off[1]:, :])
+test_NP = NP_Dataset(whole_x[cut_off[0]:cut_off[1], :], whole_y[cut_off[0]:cut_off[1]:, :])
+validation_NP = NP_Dataset(whole_x[cut_off[1]:, :], whole_y[cut_off[1]:, :])
 
 print("train and test data preprocess finished")
 print("time for preprocess", time.time() - time_start_preprocess)
@@ -124,6 +124,7 @@ class SimpleDNNModel(object):
         self.graph = tf.Graph()
         self.name = name
 
+        self.beta = 0.1
         self.FC1 = FullConnectLayer()
         # self.load()
 
@@ -145,8 +146,11 @@ class SimpleDNNModel(object):
         network = full_connect_layer(fc1_drop, self.sz_y, tf.nn.softmax)
         # network = full_connect_layer(self.FC1.layer, self.sz_y, tf.nn.softmax)
 
-        self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.y_ * tf.log(network), reduction_indices=[1]))
-        self.train_step = tf.train.AdadeltaOptimizer(5e-6).minimize(self.cross_entropy)
+        self.cross_entropy = tf.reduce_mean(-tf.nn.softmax_cross_entropy_with_logits(tf.log(network), self.y_) + 
+            self.beta*tf.nn.l2_loss(self.FC1.Weight) + 
+            self.beta*tf.nn.l2_loss(self.FC1.Bias) )
+        # learning rate
+        self.train_step = tf.train.AdadeltaOptimizer(5e-5).minimize(self.cross_entropy)
         self.y_p = tf.argmax(network, 1)
         self.correct_prediction = tf.equal(self.y_p, tf.argmax(self.y_, 1))
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
@@ -174,49 +178,51 @@ class SimpleDNNModel(object):
             test_batch = test_NP.next_batch(-1) 
             gred, val_accuracy, y_pred = sess.run([self.cross_entropy, self.accuracy, self.y_p], 
                     feed_dict={self.x: test_batch[0], self.y_: test_batch[1], self.keep_prob: 1.0})
-            validation_batch = validation_NP.next_batch(-1)
-            self.fitness = self.accuracy.eval(feed_dict = {self.x: validation_batch[0], self.y_: validation_batch[1], self.keep_prob: 1.0}, session=sess)
             y_true = np.argmax(test_batch[1], 1)
             self.test_evaluation = Model_Evaluation(val_accuracy, y_pred, y_true, gred)
+
+            validation_batch = validation_NP.next_batch(128)
+            v_gred, v_accuracy, v_y_pred = sess.run([self.cross_entropy, self.accuracy, self.y_p], 
+                    feed_dict={self.x: validation_batch[0], self.y_: validation_batch[1], self.keep_prob: 1.0})
+            self.fitness_evaluation = Model_Evaluation(v_accuracy, v_y_pred, y_true, v_gred)
+            self.fitness = self.fitness_evaluation.avg_f1
+
             self.FC1.update(*sess.run([self.FC1.Weight, self.FC1.Bias]))
 
-from genetic_subtree import *
-from copy import *
-n_model = 40
+n_model = 20
 n_generation = 100
-n_survive = 15
-n_crossover = 15
-max_step = 60000
-time_start_train = time.time()
+crossover_rate = 0.4
+change_prop = 0.2
+max_step = 70000
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
-winner = []
+for i in range(len(Models)):
+    model = Models[i]
+    model.load()
+    model.fitting(train_balance_NP, test_NP, max_step = max_step)
+    model.test_evaluation.display()
+Models.sort(key = lambda x:x.fitness, reverse=True)
+Models[0].test_evaluation.display()
+print "Start Different Evolve"
 for iter_gen in range(n_generation):
+    #Different Evolve
     for i in range(len(Models)):
-        model = Models[i]
-        model.load()
-        model.fitting(train_balance_NP, test_NP, max_step = max_step)
-        print "Generation: %d, train accuracy: %f, test accuracy: %f, fitness: %f"%(iter_gen, model.train_accuracy, model.test_evaluation.accuracy, model.fitness)
+        a, b, c = np.random.choice(np.delete(np.arange(len(Models)), i), 3)
+        if random.uniform(0, 1) < crossover_rate:
+            weight_a, bias_a = Models[a].FC1.get()
+            weight_b, bias_b = Models[b].FC1.get()
+            weight_c, bias_c = Models[c].FC1.get()
+            weight_y = weight_a + change_prop * (weight_b - weight_c)
+            bias_y = bias_a + change_prop * (bias_b - bias_c)
+            model_y = SimpleDNNModel(sz_x, sz_y, n_GPU)
+            model_y.FC1.update(weight_y, bias_y)
+            model_y.load()
+            model_y.fitting(train_balance_NP, test_NP, max_step = max_step)
+            if model_y.fitness > Models[i].fitness: Models[i] = model_y
+    print "Generation: %d, train accuracy: %f, test accuracy: %f, fitness: %f"%(iter_gen, model.train_accuracy, model.test_evaluation.accuracy, model.fitness)
     Models.sort(key = lambda x:x.fitness, reverse=True)
-    print "n_model: %d, n_generation: %d, n_survive: %d, n_crossover: %d, max_step: %d, n_hidden_1: %d"%(n_model, n_generation, n_survive, n_crossover, max_step, n_hidden_1)
+    print "n_model: %d, n_generation: %d, crossover_rate: %d, max_step: %d, n_hidden_1: %d"%(n_model, n_generation, crossover_rate, max_step, n_hidden_1)
     print "#%d, Best fitness (accuracy of validation): %f"%(iter_gen, Models[0].fitness)
     Models[0].test_evaluation.display()
-    print "total training time:", time.time() - time_start_train
     print "Time spent on this generation", time.time() - time_start_generation
     time_start_generation = time.time()
-    # TODO: Deep copy it
-    # winner.append(deepcopy(Models[0]))
-    # with open('/data/klng/git/EvolutionaryDNN/store_model/%s_%d'%(worker_name, n_generation) , 'wb') as f:
-    #     import dill
-    #     dill.dump(winner, f)
-    # Crossover
-    for i in range(0, n_survive, 2):
-        weight1, bias1 = Models[i].FC1.get()
-        weight2, bias2 = Models[i+1].FC1.get()
-        crossover(weight1, weight2, n_crossover)
-        Models[i].FC1.update(weight1, bias1)
-        Models[i+1].FC1.update(weight2, bias2)
-    # Fout
-    print "Time spent on crossove:", time.time() - time_start_generation
-    for i in range(n_survive, n_model):
-        Models[i] = SimpleDNNModel(sz_x, sz_y, n_GPU)

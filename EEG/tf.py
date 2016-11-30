@@ -22,7 +22,7 @@ def weight_variable(shape, sz = 20.0):
     return tf.Variable(initial, name="weight")
 
 def bias_variable(shape):
-    #initial = tf.constant(0.0, shape=shape)
+    # initial = tf.constant(0.0, shape=shape)
     initial = tf.zeros(shape)
     return tf.Variable(initial, name="bias")
 
@@ -86,7 +86,7 @@ class FullConnectLayer(object):
                 self.Weight = weight_variable([sz_prev, n_output], sz = n_output)
                 self.Bias = bias_variable([n_output])
             else:
-                self.Weight = tf.Variable(self.saved_wegiht, name = "weight")
+                self.Weight = tf.Variable(self.saved_weight, name = "weight")
                 self.Bias = tf.Variable(self.saved_bias, name = "bias")
             self.layer = activation(tf.matmul(self.flat, self.Weight) + self.Bias, name = "activation")
 

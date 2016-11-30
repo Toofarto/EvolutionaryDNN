@@ -1,0 +1,39 @@
+n_model = 40
+n_generation = 100
+n_survive = 15
+n_crossover = 0
+max_step = 50000
+#9, Best fitness (accuracy of validation): 0.495417
+=============Start==================
+Confusion Matrix:
+[[  30  262  368]
+[  51 2289 1320]
+[  63 1457 1360]]
+Average Accuracy: 0.510972
+Average Precision: 0.487888036263
+Average Recall: 0.510972222222
+Average F1: 0.493865082238
+=============End====================
+Time spent on this generation 240.789012909
+Time spent on crossove: 0.00156784057617
+
+############################################################
+
+n_model: 40, n_generation: 100, n_survive: 15, n_crossover: 0,
+max_step: 60000, n_hidden_1: 256
+#23, Best fitness (accuracy of validation): 0.424375
+=============Start==================
+Confusion Matrix:
+[[   0  552  108]
+[   0 2898  762]
+[   0 2256  624]]
+Average Accuracy: 0.489167
+Average Precision: 0.425243877719
+Average Recall: 0.489166666667
+Average F1: 0.42870293479
+=============End====================
+total training time: 54339.7419779
+Time spent on this generation 2246.98696089
+Time spent on crossove: 0.00028395652771
+
+#################################################################

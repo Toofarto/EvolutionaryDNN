@@ -46,7 +46,6 @@ def to_x(data):
 
 def normalize(res_data):
     sz_resdata = np.shape(res_data)
-    print res_data[0]
     print sz_resdata
     maxs = np.max(np.abs(res_data), axis = 0)
     print "MAXS:"
@@ -61,16 +60,19 @@ def normalize(res_data):
 def enlarge(data):
     sz_data = np.shape(data)
     factor = 3
-    res_data = np.zeros((sz_data[0], sz_data[1]*factor, sz_data[2]*factor, 5))
+    res_data = np.zeros((sz_data[0], sz_data[1]*factor, sz_data[2]*factor, 5), dtype=np.float32)
     for i in range(sz_data[0]):
         for ch in range(5):
             img = data[i, :, :, ch]
             res_img = scipy.ndimage.zoom(img, factor, order=1)
             res_data[i, :, :, ch] = res_img
+    print res_data[10, :, :, :]
     return res_data
 
 pre_batch = '/data/klng/git/EvolutionaryDNN/Datasets/EEG_data/'
 whole_data = np.array([unpickle(pre_batch + 's%.2d.dat'%i) for i in range(1, 32 + 1)])
-res_x = normalize(enlarge(to_x(np.array(map(lambda x: x["data"], whole_data)))))
+enlarged = enlarge(to_x(np.array(map(lambda x: x["data"], whole_data))))
+print enlarged[1, :, :, :]
+res_x = normalize(enlarge)
 with open(pre_batch + 'graph_de_enlarge_normalize.dat', 'wb') as f:
     cPickle.dump(res_x, f)

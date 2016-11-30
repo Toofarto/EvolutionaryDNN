@@ -146,7 +146,8 @@ class SimpleDNNModel(object):
         network = full_connect_layer(fc1_drop, self.sz_y, tf.nn.softmax)
         # network = full_connect_layer(self.FC1.layer, self.sz_y, tf.nn.softmax)
 
-        self.cross_entropy = tf.reduce_mean(-tf.nn.softmax_cross_entropy_with_logits(tf.log(network), self.y_) + 
+        all_one = tf.Variable(tf.constant([1.0, 1.0, 1.0]))
+        self.cross_entropy = tf.reduce_sum(tf.reduce_sum((all_one - self.y_) * tf.log(network), reduction_indices=[1]) + 
             self.beta*tf.nn.l2_loss(self.FC1.Weight) + 
             self.beta*tf.nn.l2_loss(self.FC1.Bias) )
         # learning rate
@@ -182,18 +183,19 @@ class SimpleDNNModel(object):
             self.test_evaluation = Model_Evaluation(val_accuracy, y_pred, y_true, gred)
 
             validation_batch = validation_NP.next_batch(128)
+            v_y_true = np.argmax(validation_batch[1], 1)
             v_gred, v_accuracy, v_y_pred = sess.run([self.cross_entropy, self.accuracy, self.y_p], 
                     feed_dict={self.x: validation_batch[0], self.y_: validation_batch[1], self.keep_prob: 1.0})
-            self.fitness_evaluation = Model_Evaluation(v_accuracy, v_y_pred, y_true, v_gred)
+            self.fitness_evaluation = Model_Evaluation(v_accuracy, v_y_pred, v_y_true, v_gred)
             self.fitness = self.fitness_evaluation.avg_f1
 
             self.FC1.update(*sess.run([self.FC1.Weight, self.FC1.Bias]))
 
 n_model = 20
 n_generation = 100
-crossover_rate = 0.4
-change_prop = 0.2
-max_step = 70000
+crossover_rate = 0.5
+change_prop = 0.3
+max_step = 700-0
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
 for i in range(len(Models)):

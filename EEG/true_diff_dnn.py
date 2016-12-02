@@ -114,6 +114,7 @@ class Model_Evaluation(object):
         print "Average Precision:", self.avg_precision
         print "Average Recall:", self.avg_recall
         print "Average F1:", self.avg_f1
+        print "Loss:", self.gradient
         print "=============End===================="
 
 class SimpleDNNModel(object):
@@ -124,7 +125,7 @@ class SimpleDNNModel(object):
         self.graph = tf.Graph()
         self.name = name
 
-        self.beta = 0.1
+        self.beta = 0.001
         self.FC1 = FullConnectLayer()
         # self.load()
 
@@ -147,11 +148,11 @@ class SimpleDNNModel(object):
         # network = full_connect_layer(self.FC1.layer, self.sz_y, tf.nn.softmax)
 
         all_one = tf.Variable(tf.constant([1.0, 1.0, 1.0]))
-        self.cross_entropy = tf.reduce_sum(tf.reduce_sum((all_one - self.y_) * tf.log(network), reduction_indices=[1]) + 
+        self.cross_entropy = tf.reduce_sum(-tf.reduce_mean(self.y_ * tf.log(network), reduction_indices=[1]) + 
             self.beta*tf.nn.l2_loss(self.FC1.Weight) + 
             self.beta*tf.nn.l2_loss(self.FC1.Bias) )
         # learning rate
-        self.train_step = tf.train.AdadeltaOptimizer(5e-5).minimize(self.cross_entropy)
+        self.train_step = tf.train.AdadeltaOptimizer(5e-6).minimize(self.cross_entropy)
         self.y_p = tf.argmax(network, 1)
         self.correct_prediction = tf.equal(self.y_p, tf.argmax(self.y_, 1))
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
@@ -195,7 +196,7 @@ n_model = 20
 n_generation = 100
 crossover_rate = 0.5
 change_prop = 0.3
-max_step = 7000
+max_step = 70000
 Models = [SimpleDNNModel(sz_x, sz_y, n_GPU) for i in range(n_model)]
 time_start_generation = time.time()
 for i in range(len(Models)):

@@ -5,6 +5,8 @@ import cPickle
 import tflearn
 import numpy as np
 from tflearn.data_utils import to_categorical, pad_sequences
+from tflearn.helpers.regularizer import add_weights_regularizer
+from tflearn.layers.core import flatten
 from tflearn.datasets import imdb
 
 DATA_PATH = '../Datasets/EEG_data/'
@@ -35,12 +37,13 @@ trainX, trainY = wholeX[:SIZE_TRAIN , :, :], wholeY[:SIZE_TRAIN, :]
 testX, testY = wholeX[SIZE_TRAIN:, :, :], wholeY[SIZE_TRAIN:, :]
 
 # Network building
-net = tflearn.input_data([None, SIZE_WINDOW, NUM_CHANNEL])
-# net = tflearn.embedding(net, input_dim=10000, output_dim=128)
-net = tflearn.lstm(net, 512, dropout=0.3)
-net = tflearn.fully_connected(net, NUM_OUTPUT_CLASS, activation='softmax')
-net = tflearn.regression(net, optimizer='adam', learning_rate=0.1,
-                         loss='categorical_crossentropy')
+input_ = tflearn.input_data([None, SIZE_WINDOW, NUM_CHANNEL])
+lstm_1 = tflearn.lstm(input_, 200, dropout=0.8, return_seq=True)
+# tflearn.helpers.regularizer.add_weights_regularizer(lstm_1, loss='L2')
+# net = tflearn.lstm(net, 200, dropout=0.8)
+# tflearn.add_weights_regularization(net, loss='L2')
+fc_1 = tflearn.fully_connected(lstm_1, NUM_OUTPUT_CLASS, activation='softmax', regularizer='L2')
+net = tflearn.regression(fc_1, optimizer='adam', learning_rate=0.001, loss='categorical_crossentropy')
 
 # Training
 model = tflearn.DNN(net, tensorboard_verbose=0)
